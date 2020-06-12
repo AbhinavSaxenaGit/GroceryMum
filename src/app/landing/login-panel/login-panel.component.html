@@ -1,35 +1,72 @@
-<div class="login-nav-bar">
-  <img src="../../../assets/login-nav-bar.svg" alt="Avatar" class="user-login" />
-  <label for="login"> | Login</label>
+<div class="login-nav-bar" id="loginPanel">
+  <img
+    src="../../../assets/login-nav-bar.svg"
+    alt="Avatar"
+    class="user-login"
+  />
+  <label for="login" (click)="showLoginModal()"> | Login</label>
 </div>
+
+<div class="loggedin-nav-bar" *ngIf="user; let user;" id="loggedinPanel">
+  <img
+    src="../../../assets/pp.jpg"
+    alt="Hey, Abhinav"
+    class="user-loggedin"
+  />
+  <label for="loggedin">Hey, Abhinav!</label>
+</div>
+
+<!-- <div class="loggedin-nav-bar" *ngIf="user; let user;" id="loggedinPanel">
+  <img
+    [src]="user.photo"
+    [alt]="user.name"
+    class="user-login"
+  />
+  <label for="loggedin" (click)="showLoginModal()">{{user.name}}</label>
+</div> -->
 
 <div>
   <img src="../../../assets/accordion.png" alt="Avatar" />
   <!--class="avatar"-->
 </div>
 
-
-
-<form id="login-panel" class="center-align">
-  <div>
-    <input
-      type="text"
-      placeholder="Enter mobile number.."
-      onclick="this.placeholder=''"
-      onblur="this.placeholder='Enter mobile number..'"
-      name="mobnum"
-      required
+<div id="login-modal" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+    <img
+      src="../../../assets/close.svg"
+      class="close"
+      (click)="closeLoginModal()"
     />
+    <div>
+      <input
+        type="text"
+        class="mobnum"
+        placeholder="Enter mobile number.."
+        pattern="[0-9]*" 
+        minlength="10"
+        maxlength="10"
+        onclick="this.placeholder=''"
+        onblur="this.placeholder='Enter mobile number..'"
+        id="mobnum"
+        required
+      />
 
-    <input
-      type="text"
-      placeholder="Enter otp.."
-      onclick="this.placeholder=''"
-      onblur="this.placeholder='Enter otp..'"
-      name="otp"
-      required
-    />
+      <input
+        type="text"
+        class="otp"
+        pattern="[0-9]*"
+        minlength="5"
+        maxlength="5" 
+        placeholder="Enter otp.."
+        onclick="this.placeholder=''"
+        onblur="this.placeholder='Enter otp..'"
+        id="otp"
+        required
+      />
 
-    <button type="submit">Let's go..</button>
+      <button type="submit" (click)="toggleMobnOtp()" id="mobnumBtn">Next..</button>
+      <button type="submit" (click)="showUserProfile()" id="otpBtn" class="otpBtn">Next..</button>
+    </div>
   </div>
-</form>
+</div>

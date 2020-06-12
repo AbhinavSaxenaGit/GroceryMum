@@ -1,18 +1,24 @@
 * { /*This is to manage font throguhout the application*/
     font-family: 'Courier New', Courier, monospace;
     font-weight: bold;
+    border-radius: 5px;
   }
 
 select {
     outline: none;
-    border-radius: 5px;
     padding: 0px 10px;
 }
 
 input {
     outline: none;
-    border-radius: 5px;
     padding: 0px 10px;
+}
+
+button {
+    height: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 option {

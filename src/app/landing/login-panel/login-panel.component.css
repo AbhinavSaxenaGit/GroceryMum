@@ -1,92 +1,153 @@
+.otp {
+  display: none;
+}
+
+.otpBtn {
+  display: none;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #ccf3ff;
+  margin: 10% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  height: 25%;
+  width: 20%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+  height: 20px;
+  margin-left: 50%;
+  margin-top: -2%;
+}
+
 .center-align {
-    border: 5px;
-    border-color: black;
-    display: block;
-    text-align: center;
-}  
+  border: 5px;
+  background-color: gray;
+  border-color: black;
+  display: block;
+  text-align: center;
+}
 img {
   height: 10%;
   width: 100%;
 }
-  /* Full-width inputs */
+/* Full-width inputs */
+input {
+  display: block;
+  padding: 12px 20px;
+  margin: auto;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #4caf50;
+  color: white;
+  padding: 14px 20px;
+  margin: auto;
+  border: none;
+  cursor: pointer;
+}
+
+/* Add a hover effect for buttons */
+button:hover {
+  opacity: 0.8;
+}
+
+/* Center the avatar image inside this container */
+.imgcontainer {
+  text-align: center;
+  margin: auto;
+  margin-bottom: 20px;
+}
+
+/***************************************MOBILE CSS************************************/
+@media screen and (max-width: 1024px) {
   input {
-    display: block;
-    padding: 12px 20px;
-    margin: auto;
-    margin-bottom: 5px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
+    width: 60%;
+    font-size: 90%;
   }
-  
+
   /* Set a style for all buttons */
   button {
-    background-color: #4CAF50;
-    color: white;
-    padding: 14px 20px;
-    margin: auto;
-    border: none;
-    cursor: pointer;
-  }
-  
-  /* Add a hover effect for buttons */
-  button:hover {
-    opacity: 0.8;
-  }
-    
-  /* Center the avatar image inside this container */
-  .imgcontainer {
-    text-align: center;
-    margin: auto;
-    margin-bottom: 20px;
+    width: 35%;
+    font-size: 80%;
   }
 
-  /***************************************MOBILE CSS************************************/
-@media screen and (max-width: 1024px) {
-    input {
-      width: 60%;
-      font-size: 90%;
-    }
-    
-    /* Set a style for all buttons */
-    button {
-      width: 35%;
-      font-size: 80%;
-    }
-    
-    /* Avatar image */
-    img.avatar {
-      width: 60%;
-      border-radius: 20%;
-    }
+  /* Avatar image */
+  img.avatar {
+    width: 60%;
+    border-radius: 20%;
   }
-  
-  /***************************************WEB CSS************************************/
-  @media screen and (min-width: 1024px) {
-    input {
-      width: 20%;
-    }
-    
-    /* Set a style for all buttons */
-    button {
-      width: 10%;
-    }
-    
-    /* Avatar image */
-    img.avatar {
-      width: 20%;
-      border-radius: 20%;
-    }
+}
 
-    .user-login {
-      height: 21px;
-      width: 30px;
-      }    
+/***************************************WEB CSS************************************/
+@media screen and (min-width: 1024px) {
+  input {
+    width: 80%;
+    margin-bottom: 5%;
+  }
 
-    .login-nav-bar {
-      position: absolute;
-      margin-left: 75%;
-      margin-top: -4%;
-      display: flex;
-    }
-  }  
+  /* Set a style for all buttons */
+  button {
+    width: 30%;
+    margin-left: 60%;
+  }
+
+  /* Avatar image */
+  img.avatar {
+    width: 20%;
+    border-radius: 20%;
+  }
+
+  .user-login {
+    height: 21px;
+    width: 30px;
+  }
+
+  .user-loggedin {
+    height: 21px;
+    width: 30px;
+    margin-right: 5px;
+  }
+
+  .login-nav-bar {
+    position: absolute;
+    margin-left: 75%;
+    margin-top: -4%;
+    display: flex;
+  }
+
+  .loggedin-nav-bar {
+    position: absolute;
+    margin-left: 74%;
+    margin-top: -4%;
+    display: none;
+  }
+
+  .center-align {
+    height: 40%;
+    width: 30%;
+    margin-left: 35%;
+  }
+}
