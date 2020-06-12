@@ -1,0 +1,92 @@
+.center-align {
+    border: 5px;
+    border-color: black;
+    display: block;
+    text-align: center;
+}  
+img {
+  height: 10%;
+  width: 100%;
+}
+  /* Full-width inputs */
+  input {
+    display: block;
+    padding: 12px 20px;
+    margin: auto;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+  
+  /* Set a style for all buttons */
+  button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: auto;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* Add a hover effect for buttons */
+  button:hover {
+    opacity: 0.8;
+  }
+    
+  /* Center the avatar image inside this container */
+  .imgcontainer {
+    text-align: center;
+    margin: auto;
+    margin-bottom: 20px;
+  }
+
+  /***************************************MOBILE CSS************************************/
+@media screen and (max-width: 1024px) {
+    input {
+      width: 60%;
+      font-size: 90%;
+    }
+    
+    /* Set a style for all buttons */
+    button {
+      width: 35%;
+      font-size: 80%;
+    }
+    
+    /* Avatar image */
+    img.avatar {
+      width: 60%;
+      border-radius: 20%;
+    }
+  }
+  
+  /***************************************WEB CSS************************************/
+  @media screen and (min-width: 1024px) {
+    input {
+      width: 20%;
+    }
+    
+    /* Set a style for all buttons */
+    button {
+      width: 10%;
+    }
+    
+    /* Avatar image */
+    img.avatar {
+      width: 20%;
+      border-radius: 20%;
+    }
+
+    .user-login {
+      height: 21px;
+      width: 30px;
+      }    
+
+    .login-nav-bar {
+      position: absolute;
+      margin-left: 75%;
+      margin-top: -4%;
+      display: flex;
+    }
+  }  
