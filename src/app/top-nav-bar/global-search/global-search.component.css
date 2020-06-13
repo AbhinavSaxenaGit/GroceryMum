@@ -22,18 +22,20 @@ input.searchBtn {
 
 @media screen and (max-width: 1024px) {
   /*Mobiles*/
+
   input.searchBox {
     width: 50%;
     height: 32px;
     font-size: 90%;
     margin-left: 15%;
+    margin-top: -16.3%;
   }
 
   /* Set a style for all buttons */
   input.searchBtn {
     width: 40px;
     height: 32px;
-    margin-top: 9px;
+    margin-top: -16.3%;
     margin-left: 70.5%;
     border: none;
     background-color: rgb(236, 236, 234);
@@ -42,17 +44,19 @@ input.searchBtn {
 
 @media screen and (min-width: 1024px) {
   /*Web*/
+
   input.searchBox {
     width: 35%;
     height: 30px;
     margin-left: 31%;
+    margin-top: -4.3%;
   }
 
   /* Set a style for all buttons */
   input.searchBtn {
     width: 3%;
     height: 30px;
-    margin-top: 9px;
+    margin-top: -4.3%;
     margin-left: 67.5%;
     border: none;
     background-color: rgb(236, 236, 234);

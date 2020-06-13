@@ -1,0 +1,20 @@
+<div class="cart-nav-bar" id="cartPanel">
+    <img
+      src="../../../assets/cart.svg"
+      alt="Cart"
+      class="user-cart"
+    />
+    <label for="login" (click)="showCartSideBar()"> | My Cart</label>
+</div>
+
+<div id="sidebar" class="side-bar-background">
+    <div id="cartmodal" class="side-bar-content">
+        <img
+          src="../../../assets/close.svg"
+          class="close"
+          (click)="closeCartSideBar()"
+        />
+    </div>
+</div>
+
+  
