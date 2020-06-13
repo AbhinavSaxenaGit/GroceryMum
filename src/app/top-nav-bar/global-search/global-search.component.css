@@ -10,7 +10,7 @@ input.searchBox {
 input.searchBtn {
   border-radius: 0px 2px 2px 0px;
   position: absolute;
-  background-image: url(../../assets/lens.svg);
+  background-image: url(../../../assets/lens.svg);
   background-repeat: no-repeat;
   background-size: 70%;
   background-position: 50%, 50%;
