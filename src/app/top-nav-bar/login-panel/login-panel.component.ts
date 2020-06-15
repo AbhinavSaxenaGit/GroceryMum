@@ -40,8 +40,12 @@ export class LoginPanelComponent implements OnInit {
   showUserProfile(){
     this.closeLoginModal();
     let loginDiv = document.getElementById('loginPanel');
-    let loggedinDiv = document.getElementById('loggedinPanel');
+    let logoutPanelDiv = document.getElementById('logoutPanel');
     loginDiv.style.display = 'none';
-    loggedinDiv.style.display = 'block';
+    logoutPanelDiv.style.display = 'block';
+  }
+
+  Logout (){
+    location.reload();
   }
 }

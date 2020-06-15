@@ -26,3 +26,10 @@ option {
     border: none;
     padding: 0px 10px;
 }
+
+/******************************MOBILE********************************/
+@media screen and (max-width: 1024px) {
+    body {
+        background-color:rgb(53, 52, 52);
+      }
+}

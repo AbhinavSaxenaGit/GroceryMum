@@ -1,9 +1,28 @@
-select {
+/*********************************MOBILE*******************************/
+@media screen and (max-width: 1024px) {
+  select {
+    width: 40%;
+    height: 35px;
+    position: absolute;
+    margin-top: 201%;
+    margin-left: 25.5%;
+    border-color: black;
+    background: transparent;
+    font-size: 100%;
+    position: fixed;
+  }
+}
+
+
+/**********************************WEB******************************/
+@media screen and (min-width: 1024px) {
+  select {
     width: 15%;
     height: 29px;
     position: absolute;
     margin-top: -4.3%;
     margin-left: 8%;
     background: transparent;
-    border-color: black;
+    border-color: black; 
+  }
 }

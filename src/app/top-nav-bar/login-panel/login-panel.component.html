@@ -1,19 +1,21 @@
-<div class="login-nav-bar" id="loginPanel">
-  <img
-    src="../../../assets/login-nav-bar.svg"
-    alt="Avatar"
-    class="user-login"
-  />
-  <label for="login" (click)="showLoginModal()"> | Login</label>
-</div>
+<div class="login-nav-bar">
+  <div id="loginPanel" class="user-login">
+    <img
+      src="../../../assets/login-nav-bar.svg"
+      alt="Avatar"
+      class="user-login-img" 
+    />
+    <label for="login" (click)="showLoginModal()">Login</label>
+  </div>
 
-<div class="loggedin-nav-bar" *ngIf="user; let user;" id="loggedinPanel">
-  <img
-    src="../../../assets/pp.jpg"
-    alt="Hey, Abhinav"
-    class="user-loggedin"
-  />
-  <label for="loggedin">Hey, Abhinav!</label>
+  <div id="logoutPanel" class="user-logout">
+    <img
+      src="../../../assets/login-nav-bar.svg"
+      alt="Hey, User"
+      class="user-login-img" 
+    />
+    <label for="logout" (click)="Logout()">Logout</label>
+  </div>
 </div>
 
 <!-- <div class="loggedin-nav-bar" *ngIf="user; let user;" id="loggedinPanel">
@@ -26,7 +28,7 @@
 </div> -->
 
 <div>
-  <img src="../../../assets/accordion.png" alt="Avatar" />
+  <img src="../../../assets/accordion.png" alt="Avatar" class="accordion"/>
   <!--class="avatar"-->
 </div>
 
