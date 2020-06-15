@@ -1,11 +1,11 @@
 /*********************************MOBILE*******************************/
 @media screen and (max-width: 1024px) {
   select {
-    width: 40%;
+    width: 37%;
     height: 35px;
     position: absolute;
-    margin-top: 201%;
-    margin-left: 25.5%;
+    margin-top: 164%;
+    margin-left: 26%;
     border-color: black;
     background: transparent;
     font-size: 100%;

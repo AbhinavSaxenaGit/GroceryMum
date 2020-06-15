@@ -25,7 +25,7 @@
 /* The Close Button */
 .close {
   height: 20px;
-  margin-left: 50%;
+  margin-left: 98%;
   margin-top: -2%;
 }
 
@@ -75,7 +75,7 @@ button:hover {
 
   .login-nav-bar {
     margin-left: 1%;
-    margin-top: 202%;
+    margin-top: 165%;
     display: flex;
     font-size: 110%;
     position: fixed;
