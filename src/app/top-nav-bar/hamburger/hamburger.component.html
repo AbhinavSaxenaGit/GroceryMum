@@ -2,5 +2,25 @@
     <img
     src="../../../assets/hamburger.svg"
     class="hamburger-img" 
+    (click)="openNav()"
     />
 </div>
+
+<div class="sliding-panel">
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" (click)="closeNav()"
+        >&times;</a
+      >
+      <a href="#">Top selling items</a>
+      <a href="#">Oils</a>
+      <a href="#">Cold Drinks</a>
+      <a href="#">Baby Products</a>
+      <a href="#">Beverages</a>
+      <a href="#">Bread & Bakery</a>
+      <a href="#">Breakfast & Cereal</a>
+      <a href="#">Canned Goods & Soups</a>
+      <a href="#">Condiments/Spices & Bake</a>
+      <a href="#">Cookies, Snacks & Candy</a>
+    </div>
+  </div>
+  

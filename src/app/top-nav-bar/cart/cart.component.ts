@@ -20,6 +20,15 @@ export class CartComponent implements OnInit {
   closeCartSideBar() {
     let background = document.getElementById('sidebar');
     background.style.display = 'none';
-  };
+  }
+
+  
+  openNav() {
+    document.getElementById("cartSidenav").style.width = "100%";
+  }
+  
+  closeNav() {
+    document.getElementById("cartSidenav").style.width = "0";
+  }
 
 }

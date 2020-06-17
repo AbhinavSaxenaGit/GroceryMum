@@ -48,4 +48,13 @@ export class LoginPanelComponent implements OnInit {
   Logout (){
     location.reload();
   }
+
+  
+  openNav() {
+    document.getElementById("mySidenav").style.width = "100%";
+  }
+  
+  closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+  }
 }

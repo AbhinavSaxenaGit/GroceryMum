@@ -2,5 +2,15 @@
     <img
     src="../../../assets/Home.svg"
     class="home-img"
+    (click)="openNav()"
     />
 </div>
+
+<div class="sliding-panel">
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" (click)="closeNav()"
+        >&times;</a
+      >
+    </div>
+  </div>
+  

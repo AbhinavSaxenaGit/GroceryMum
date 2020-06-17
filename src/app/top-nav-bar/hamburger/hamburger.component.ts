@@ -17,4 +17,13 @@ export class HamburgerComponent implements OnInit {
     sidebar.style.display = 'block';
   }
 
+  
+  openNav() {
+    document.getElementById("mySidenav").style.width = "100%";
+  }
+  
+  closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+  }
+
 }
