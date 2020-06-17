@@ -37,8 +37,11 @@ option {
 }
 
 /******************************WEB********************************/
-/* @media screen and (min-width: 1024px) {
-div:hover {
-    background-color: yellow;
+@media screen and (min-width: 1024px) {
+  .cart-sliding-panel {
+    display: none;
   }
-} */
+  .sliding-panel {
+    display: none;
+  }
+}
