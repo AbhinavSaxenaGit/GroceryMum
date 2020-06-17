@@ -10,6 +10,7 @@ import { LocationPanelComponent } from './top-nav-bar/location-panel/location-pa
 import { CartComponent } from './top-nav-bar/cart/cart.component';
 import { HomeComponent } from './top-nav-bar/home/home.component';
 import { HamburgerComponent } from './top-nav-bar/hamburger/hamburger.component';
+import { DetailsSliderComponent } from './details-slider/details-slider.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { HamburgerComponent } from './top-nav-bar/hamburger/hamburger.component'
     CartComponent,
     HomeComponent,
     HamburgerComponent,
+    DetailsSliderComponent,
   ],
   imports: [
     BrowserModule

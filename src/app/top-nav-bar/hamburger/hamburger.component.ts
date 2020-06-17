@@ -11,5 +11,10 @@ export class HamburgerComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  
+  showCartSideBar() {
+    let sidebar = document.getElementById("sidebar");
+    sidebar.style.display = 'block';
+  }
 
 }
