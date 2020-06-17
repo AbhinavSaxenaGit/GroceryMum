@@ -26,7 +26,6 @@
 .close {
   height: 20px;
   margin-left: 98%;
-  margin-top: -2%;
 }
 
 .center-align {
@@ -39,7 +38,6 @@
 
 /* Full-width inputs */
 input {
-  display: block;
   padding: 12px 20px;
   margin: auto;
   margin-bottom: 5px;
@@ -74,29 +72,27 @@ button:hover {
 @media screen and (max-width: 1024px) {
 
   .login-nav-bar {
-    margin-left: 1%;
-    margin-top: 165%;
-    display: flex;
-    font-size: 110%;
-    position: fixed;
+    width: 33%;
+    height: 100px;
+    position: absolute;
+    display: grid;
+    left: 33%;
   }
 
   .user-login {
     height: 30px;
     width: 30px;
-    position: fixed;
   }
 
   .user-login-img {
-    height: 30px;
-    width: 30px;
-    position: fixed;
+    height: 40px;
+    width: 40px;
+    margin-top: 28px;
+    margin-left: 40px;
   }
 
   label {
-    position: fixed;
-    margin-left: 30px;
-    margin-top: 5px;
+    margin-left: 35px;
   }
 
   input {
@@ -108,7 +104,6 @@ button:hover {
   button {
     width: 35%;
     font-size: 80%;
-    margin-top: 20px;
   }
 
   /* Avatar image */
@@ -119,8 +114,7 @@ button:hover {
 
   /* Login Modal Content*/
 .modal-content {
-  background-color: #f59a23;
-  margin-top: 50%;
+  background-color: #F8F9B3;
   margin-left: 10%;
   padding: 20px;
   border: 1px solid #888;
@@ -132,7 +126,6 @@ button:hover {
   display: none;
   height: 30px;
   width: 30px;
-  position: fixed;
 }
 
 .accordion {
@@ -143,32 +136,11 @@ button:hover {
 
 /***************************************WEB CSS************************************/
 @media screen and (min-width: 1024px) {
-
-  label {
-    margin-left: 100%;
-      margin-top: 15%;
-      position: absolute;
-  }
-
-  input {
-    width: 80%;
-    margin-bottom: 5%;
-  }
-
-  /* Set a style for all buttons */
-  button {
-    width: 30%;
-    margin-left: 60%;
-  }
-
-  .accordion {
-  height: 10%;
-  width: 100%;
-}
-  /* Avatar image */
-  img.avatar {
-    width: 20%;
-    border-radius: 20%;
+  .login-nav-bar {
+    width: 8%;
+    position: absolute;
+    left: 75%;
+    margin-top: 12px;
   }
 
   .user-login {
@@ -177,7 +149,7 @@ button:hover {
   }
 
   .user-login-img {
-    height: 30px;
+    height: 24px;
     width: 30px;
     position: fixed;
   }
@@ -186,36 +158,32 @@ button:hover {
     display: none;
     height: 21px;
     width: 30px;
-    margin-right: 5px;
   }
-
-  .login-nav-bar {
-    position: absolute;
-    margin-left: 76.5%;
-    margin-top: -4.3%;
-    display: flex;
-  }
-
-  .loggedin-nav-bar {
-    position: absolute;
-    margin-left: 74%;
-    margin-top: -4%;
-    display: none;
-  }
-
-  .center-align {
-    height: 40%;
-    width: 30%;
-    margin-left: 35%;
-  }
-
-  /* Modal Content/Box */
+  
+    /* Modal Content/Box */
 .modal-content {
-  background-color: #f59a23;
+  background-color: #F8F9B3;
   margin: 10% auto; /* 15% from the top and centered */
   padding: 20px;
   border: 1px solid #888;
   height: 25%;
   width: 20%; /* Could be more or less, depending on screen size */
 }
+
+  label {
+    margin-left: 100%;
+  }
+
+  input {
+    width: 90%;
+    height: 20%;
+    margin-left: 5%;
+  }
+
+  /* Set a style for all buttons */
+  button {
+    width: 30%;
+    margin-left: 65%;
+    margin-top: 10%;
+  }
 }

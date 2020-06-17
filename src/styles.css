@@ -7,15 +7,17 @@
 select {
     outline: none;
     padding: 0px 10px;
+    height: 20px;
 }
+
 
 input {
     outline: none;
-    padding: 0px 10px;
+    height: 20px;
 }
 
 button {
-    height: 10px;
+    height: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -24,12 +26,19 @@ button {
 option {
     outline: none;
     border: none;
-    padding: 0px 10px;
+    height: 20px;
 }
 
 /******************************MOBILE********************************/
 @media screen and (max-width: 1024px) {
     body {
-        background-color:rgb(53, 52, 52);
+        background-color:whitesmoke;
       }
 }
+
+/******************************WEB********************************/
+/* @media screen and (min-width: 1024px) {
+div:hover {
+    background-color: yellow;
+  }
+} */

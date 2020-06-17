@@ -1,5 +1,9 @@
-<div>
-    <select id="location">
+<div class="nav-bar-location">
+    <img
+    src="../../../assets/location.svg"
+    class="location-img" 
+    />
+    <select id="location" class="locations">
         <option 
             *ngFor="let location of locations" 
             [value]="location.id"
