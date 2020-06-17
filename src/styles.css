@@ -1,39 +1,39 @@
-* { /*This is to manage font throguhout the application*/
-    font-family: 'Courier New', Courier, monospace;
-    font-weight: bold;
-    border-radius: 5px;
-  }
-
-select {
-    outline: none;
-    padding: 0px 10px;
-    height: 20px;
+* {
+  /*This is to manage font throguhout the application*/
+  font-family: "Courier New", Courier, monospace;
+  font-weight: bold;
+  border-radius: 5px;
 }
 
+select {
+  outline: none;
+  padding: 0px 10px;
+  height: 20px;
+}
 
 input {
-    outline: none;
-    height: 20px;
+  outline: none;
+  height: 20px;
 }
 
 button {
-    height: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 option {
-    outline: none;
-    border: none;
-    height: 20px;
+  outline: none;
+  border: none;
+  height: 20px;
 }
 
 /******************************MOBILE********************************/
 @media screen and (max-width: 1024px) {
-    body {
-        background-color:whitesmoke;
-      }
+  body {
+    background-color: whitesmoke;
+  }
 }
 
 /******************************WEB********************************/
