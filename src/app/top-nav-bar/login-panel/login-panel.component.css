@@ -72,27 +72,24 @@ button:hover {
 @media screen and (max-width: 1024px) {
 
   .login-nav-bar {
-    width: 33%;
-    height: 100px;
     position: absolute;
     display: grid;
-    left: 33%;
+    left: 55%;
   }
 
   .user-login {
-    height: 30px;
-    width: 30px;
+    display: grid;
   }
 
   .user-login-img {
-    height: 40px;
+    height: 35px;
     width: 40px;
-    margin-top: 28px;
+    margin-top: 5px;
     margin-left: 40px;
   }
 
   label {
-    margin-left: 35px;
+    display: none;
   }
 
   input {

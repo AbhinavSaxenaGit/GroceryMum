@@ -1,0 +1,27 @@
+/*********************************MOBILE*******************************/
+@media screen and (max-width: 1024px) {
+    .nav-bar-home {
+      position: absolute;
+      display: grid;
+      left: 20%;
+    }
+  
+    .home-img {
+      background-repeat: no-repeat;
+      height: 25px;
+      width: 30px;
+      margin-left: 30px;
+      margin-top: 5px;
+    }
+  }
+
+/*********************************WEB*******************************/
+@media screen and (min-width: 1024px) {
+  .nav-bar-home {
+    display: none;
+  }
+
+  .home-img {
+    display: none;
+  }
+}  

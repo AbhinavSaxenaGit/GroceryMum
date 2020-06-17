@@ -8,6 +8,8 @@ import { LoginPanelComponent } from './top-nav-bar/login-panel/login-panel.compo
 import { GlobalSearchComponent } from './top-nav-bar/global-search/global-search.component';
 import { LocationPanelComponent } from './top-nav-bar/location-panel/location-panel.component';
 import { CartComponent } from './top-nav-bar/cart/cart.component';
+import { HomeComponent } from './top-nav-bar/home/home.component';
+import { HamburgerComponent } from './top-nav-bar/hamburger/hamburger.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +20,8 @@ import { CartComponent } from './top-nav-bar/cart/cart.component';
     GlobalSearchComponent,
     LocationPanelComponent,
     CartComponent,
+    HomeComponent,
+    HamburgerComponent,
   ],
   imports: [
     BrowserModule

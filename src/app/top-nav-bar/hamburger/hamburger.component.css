@@ -1,0 +1,15 @@
+/*********************************MOBILE*******************************/
+@media screen and (max-width: 1024px) {
+    .nav-bar-hamburger {
+      position: absolute;
+      display: grid;
+    }
+  
+    .hamburger-img {
+      background-repeat: no-repeat;
+      height: 60px;
+      width: 39px;
+      margin-left: 30px;
+      margin-top: -10px;
+    }
+  }
