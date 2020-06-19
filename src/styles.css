@@ -1,14 +1,13 @@
+@import '@angular/material/prebuilt-themes/indigo-pink.css';
+
 * {
   /*This is to manage font throguhout the application*/
-  font-family: "Courier New", Courier, monospace;
-  font-weight: bold;
+  font-family: "Roboto";
   border-radius: 5px;
 }
 
-select {
-  outline: none;
+mat-select {
   padding: 0px 10px;
-  height: 20px;
 }
 
 input {
@@ -45,3 +44,6 @@ option {
     display: none;
   }
 }
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

@@ -12,6 +12,10 @@ export class CartComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  clickCart() {
+    let element = document.getElementById("cartImg");
+    element.classList.toggle("user-cart-selected");
+}
   showCartSideBar() {
     let sidebar = document.getElementById("sidebar");
     sidebar.style.display = 'block';
@@ -23,12 +27,12 @@ export class CartComponent implements OnInit {
   }
 
   
-  openNav() {
-    document.getElementById("cartSidenav").style.width = "100%";
-  }
+  // openCartNav() {
+  //   document.getElementById("cartSidenav").style.width = "100%";
+  // }
   
-  closeNav() {
-    document.getElementById("cartSidenav").style.width = "0";
-  }
+  // closeCartNav() {
+  //   document.getElementById("cartSidenav").style.width = "0";
+  // }
 
 }

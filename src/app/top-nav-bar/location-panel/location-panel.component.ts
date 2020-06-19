@@ -6,6 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./location-panel.component.css'],
 })
 export class LocationPanelComponent implements OnInit {
+  isElementForMobile = false;
+  isElementForWeb = false;
+
   locations = [
     { id: 1, name: 'Ghaziabad' },
     { id: 2, name: 'Raj Nagar' },
@@ -14,34 +17,25 @@ export class LocationPanelComponent implements OnInit {
   
   constructor() {}
 
-  ngOnInit(): void {}
-
-  myFunction() {
-    document.getElementById("locationDropdown").classList.toggle("show");
-  }
-  
-  filterFunction() {
-    let input, filter, ul, li, a, i, div, txtValue;
-    input = document.getElementById("myInput");
-    filter = input.value.toUpperCase();
-    div = document.getElementById("locationDropdown");
-    a = div.getElementsByTagName("a");
-    for (i = 0; i < a.length; i++) {
-      txtValue = a[i].textContent || a[i].innerText;
-      if (txtValue.toUpperCase().indexOf(filter) > -1) {
-        a[i].style.display = "";
-      } else {
-        a[i].style.display = "none";
-      }
+  ngOnInit() {
+    if (window.screen.width <= 1024) { 
+      this.isElementForMobile = true;
+    }
+    else {
+      this.isElementForWeb = true;
     }
   }
 
-  
-  openNav() {
-    document.getElementById("mySidenav").style.width = "100%";
+  locationColor = '';
+
+  openLocationNav() {
+    document.getElementById("locationSidenav").style.width = "100%";
+    document.getElementById("navBarLocation").style.backgroundColor='darkstaleblue';
+    this.locationColor = 'darkstaleblue';
   }
   
-  closeNav() {
-    document.getElementById("mySidenav").style.width = "0";
+  closeLocationNav() {
+    document.getElementById("locationSidenav").style.width = "0";
+    this.locationColor = 'whitesmoke';
   }
 }

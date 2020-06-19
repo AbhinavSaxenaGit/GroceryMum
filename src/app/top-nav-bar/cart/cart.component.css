@@ -3,7 +3,11 @@
   .cart-nav-bar {
     position: absolute;
     display: grid;
-    left: 72%;
+    left: 80%;
+    width: 20%;
+    border-radius: 5px;
+    height: 35px;
+    margin-top: 1px;
   }
 
   img.close {
@@ -21,8 +25,16 @@
   .user-cart {
     height: 30px;
     width: 30px;
+    margin-left: 25px;
+    margin-top: 3px;
+  }
+
+  .user-cart-selected {
+    height: 30px;
+    width: 30px;
     margin-left: 60px;
     margin-top: 5px;
+    filter: invert(48%) sepia(79%) saturate(2476%) hue-rotate(86deg) brightness(118%) contrast(119%);
   }
 
   label {
@@ -46,7 +58,7 @@
     background-color: #ccf3ff;
     margin: 1% 1% 1% 1%;
     border: 1px solid #888;
-    height: 90%;
+    height: 87%;
     width: 97%;
   }
 
@@ -58,14 +70,14 @@
 
 
 /*slider*/
-  .cart-sidenav {
-    height: 90%;
+  /* .cart-sidenav {
+    height: 87%;
     width: 0;
     position: fixed;
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: #111;
+    background-color: darkslateblue;
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
@@ -98,7 +110,7 @@
     .sidenav a {
       font-size: 18px;
     }
-  }
+  } */
 }
 
 

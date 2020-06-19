@@ -9,19 +9,21 @@ input.searchBtn {
 @media screen and (max-width: 1024px) {
 
   .search-background {
-    height: 40px;
+    height: 60px;
     position: fixed;
     top: 0px;
-    width: 103%;
+    width: 100%;
+    background-color: darkslateblue;
   }
 
   input.searchBox {
-    width: 80%;
+    width: 76%;
     height: -webkit-fill-available;
     border: none;
     border-radius: 2px 0px 0px 2px;
     padding: 0px 10px;
     display: flex;
+    margin-left: 14px;
   }
 
   /* Set a style for all buttons */
@@ -30,10 +32,10 @@ input.searchBtn {
     border: none;
     border-radius: 0px 2px 2px 0px;
     display: flex;
-    margin-top: -40px;
-    height: 40px;
-    width: 10%;
+    margin-top: -60px;
+    width: 12.5%;
     margin-left: 84%;
+    height: -webkit-fill-available;
   }
 }
 

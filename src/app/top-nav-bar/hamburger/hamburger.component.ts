@@ -12,18 +12,18 @@ export class HamburgerComponent implements OnInit {
   ngOnInit(): void {
   }
   
-  showCartSideBar() {
-    let sidebar = document.getElementById("sidebar");
-    sidebar.style.display = 'block';
-  }
-
+  color ='';
   
-  openNav() {
-    document.getElementById("mySidenav").style.width = "100%";
+  openHamburgerNav() {
+    document.getElementById("hbSidenav").style.width = "100%";
+    this.color = 'darkslateblue';
   }
   
-  closeNav() {
-    document.getElementById("mySidenav").style.width = "0";
+  closeHamburgerNav() {
+    // alert(this.color);
+    document.getElementById("hbSidenav").style.width = "0";
+    this.color = 'smokewhite';
+    // alert(this.color);
   }
 
 }

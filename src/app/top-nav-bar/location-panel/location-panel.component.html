@@ -1,28 +1,34 @@
-<div class="nav-bar-location">
-    <img
+<div class="nav-bar-location" id="navBarLocation">
+  <img
+    *ngIf="isElementForMobile"
     src="../../../assets/location.svg"
-    class="location-img" 
-    (click)="openNav()"
-    />
-    <select id="location" class="locations">
-        <option 
-            *ngFor="let location of locations" 
-            [value]="location.id"
-            [attr.selected]="location.id==1 ? true : null">
-                {{location.name}}
-        </option>
-    </select>
+    class="location-img"
+    (click)="openLocationNav()"
+  />
+
+  <mat-form-field *ngIf="isElementForWeb">
+    <mat-label *ngIf="!location.value">Your Location</mat-label>
+    <mat-select id="location" #location>
+      <mat-option *ngFor="let location of locations" [value]="location.id">
+        {{ location.name }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
 </div>
 
-<div class="sliding-panel">
-    <div id="mySidenav" class="sidenav">
-      <a href="javascript:void(0)" class="closebtn" (click)="closeNav()"
-        >&times;</a
-      >
-      <a href="#">About</a>
-      <a href="#">Services</a>
-      <a href="#">Clients</a>
-      <a href="#">Contact</a>
-    </div>
-  </div>
-  
+<div id="locationSidenav" class="location-sidenav">
+  <a
+    href="javascript:void(0)"
+    class="location-closebtn"
+    (click)="closeLocationNav()"
+    >&times;</a
+  >
+  <mat-form-field *ngIf="isElementForMobile" class="form full-width">
+    <mat-label *ngIf="!location.value">Your Location</mat-label>
+    <mat-select id="location" #location>
+      <mat-option *ngFor="let location of locations" [value]="location.id">
+        {{ location.name }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>

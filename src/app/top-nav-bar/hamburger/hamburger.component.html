@@ -1,16 +1,16 @@
-<div class="nav-bar-hamburger">
+<div class="nav-bar-hamburger" [ngStyle]="{'background-color' : color}">
     <img
     src="../../../assets/hamburger.svg"
     class="hamburger-img" 
-    (click)="openNav()"
+    (click)="openHamburgerNav()" 
     />
 </div>
 
-<div class="sliding-panel">
-    <div id="mySidenav" class="sidenav">
-      <a href="javascript:void(0)" class="closebtn" (click)="closeNav()"
+<div>
+    <div id="hbSidenav" class="hb-sidenav">
+      <a href="javascript:void(0)" class="hb-closebtn" (click)="closeHamburgerNav()"
         >&times;</a
-      >
+      > 
       <a href="#">Top selling items</a>
       <a href="#">Oils</a>
       <a href="#">Cold Drinks</a>

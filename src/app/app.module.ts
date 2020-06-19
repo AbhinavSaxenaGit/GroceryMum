@@ -10,7 +10,13 @@ import { LocationPanelComponent } from './top-nav-bar/location-panel/location-pa
 import { CartComponent } from './top-nav-bar/cart/cart.component';
 import { HomeComponent } from './top-nav-bar/home/home.component';
 import { HamburgerComponent } from './top-nav-bar/hamburger/hamburger.component';
-import { DetailsSliderComponent } from './details-slider/details-slider.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatSelectModule} from '@angular/material/select';
+import {MatTabsModule} from '@angular/material/tabs';
+import {MatInputModule} from '@angular/material/input';
+import {MatButtonModule} from '@angular/material/button';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {MatIconModule} from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -23,10 +29,17 @@ import { DetailsSliderComponent } from './details-slider/details-slider.componen
     CartComponent,
     HomeComponent,
     HamburgerComponent,
-    DetailsSliderComponent,
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    BrowserAnimationsModule,
+    MatSelectModule,
+    MatTabsModule,
+    MatInputModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MatIconModule,
+    MatButtonModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

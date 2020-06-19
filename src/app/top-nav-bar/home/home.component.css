@@ -1,67 +1,24 @@
 /*********************************MOBILE*******************************/
 @media screen and (max-width: 1024px) {
-    .nav-bar-home {
-      position: absolute;
-      display: grid;
-      left: 15%;
-    }
-  
-    .home-img {
-      background-repeat: no-repeat;
-      height: 25px;
-      width: 30px;
-      margin-left: 30px;
-      margin-top: 5px;
-    }
-
-/*slider*/
-body {
-  font-family: "Lato", sans-serif;
-}
-
-.sidenav {
-  height: 90%;
-  width: 0;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: #111;
-  overflow-x: hidden;
-  transition: 0.5s;
-  padding-top: 60px;
-}
-
-.sidenav a {
-  padding: 8px 8px 8px 32px;
-  text-decoration: none;
-  color: #818181;
-  display: block;
-  transition: 0.3s;
-}
-
-.sidenav a:hover {
-  color: #f1f1f1;
-}
-
-.sidenav .closebtn {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
-}
-
-@media screen and (max-height: 450px) {
-  .sidenav {
-    padding-top: 15px;
+  .nav-bar-home {
+    position: absolute;
+    display: grid;
+    left: 20%;
+    width: 20%;
+    border-radius: 5px;
+    height: 35px;
+    margin-top: 1px;
+    background-color: 'whitesmoke';
   }
-  .sidenav a {
-    font-size: 18px;
+
+  .home-img {
+    background-repeat: no-repeat;
+    height: 25px;
+    width: 30px;
+    margin-left: 23px;
+    margin-top: 4px;
   }
 }
-}
-
 
 /*********************************WEB*******************************/
 @media screen and (min-width: 1024px) {
@@ -72,4 +29,4 @@ body {
   .home-img {
     display: none;
   }
-}  
+}

@@ -1,16 +1,7 @@
-<div class="nav-bar-home">
+<div class="nav-bar-home" [ngStyle]="{'background-color' : homeIconColor}">
     <img
     src="../../../assets/Home.svg"
     class="home-img"
-    (click)="openNav()"
-    />
+    (click)="homeClick()">
 </div>
-
-<div class="sliding-panel">
-    <div id="mySidenav" class="sidenav">
-      <a href="javascript:void(0)" class="closebtn" (click)="closeNav()"
-        >&times;</a
-      >
-    </div>
-  </div>
   

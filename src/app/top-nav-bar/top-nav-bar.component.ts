@@ -7,9 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TopNavBarComponent implements OnInit {
 
-  constructor() { }
+  isElementForMobile = false;
+  isElementForWeb = false;
+ 
+  constructor() {}
 
-  ngOnInit(): void {
+  ngOnInit() {
+    if (window.screen.width <= 1024) { 
+      this.isElementForMobile = true;
+    }
+    else {
+      this.isElementForWeb = true;
+    }
   }
 
 }

@@ -1,80 +1,30 @@
-.otp {
-  display: none;
+.form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 90%;
+  margin-left: 10px;
 }
 
-.otpBtn {
-  display: none;
+.full-width {
+  width: 90%;
+  margin-left: 10px;
 }
 
-/* The Modal (background) */
-.modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-}
-
-
-
-/* The Close Button */
-.close {
-  height: 20px;
-  margin-left: 98%;
-}
-
-.center-align {
-  border: 5px;
-  background-color: gray;
-  border-color: black;
-  display: block;
-  text-align: center;
-}
-
-/* Full-width inputs */
-input {
-  padding: 12px 20px;
-  margin: auto;
-  margin-bottom: 5px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-  box-sizing: border-box;
-}
-
-/* Set a style for all buttons */
-button {
-  background-color: #4caf50;
-  color: white;
-  padding: 14px 20px;
-  margin: auto;
-  border: none;
-  cursor: pointer;
-}
-
-/* Add a hover effect for buttons */
-button:hover {
-  opacity: 0.8;
-}
-
-/* Center the avatar image inside this container */
-.imgcontainer {
-  text-align: center;
-  margin: auto;
-  margin-bottom: 20px;
+button
+{
+  margin-left: 78%;
 }
 
 /***************************************MOBILE CSS************************************/
 @media screen and (max-width: 1024px) {
-
   .login-nav-bar {
     position: absolute;
     display: grid;
-    left: 55%;
+    left: 60%;
+    width: 20%;
+    border-radius: 5px;
+    height: 35px;
+    margin-top: 1px;
   }
 
   .user-login {
@@ -84,23 +34,12 @@ button:hover {
   .user-login-img {
     height: 35px;
     width: 40px;
-    margin-top: 5px;
-    margin-left: 40px;
+    margin-top: 3px;
+    margin-left: 21px;
   }
 
   label {
     display: none;
-  }
-
-  input {
-    width: 90%;
-    font-size: 90%;
-  }
-
-  /* Set a style for all buttons */
-  button {
-    width: 35%;
-    font-size: 80%;
   }
 
   /* Avatar image */
@@ -109,76 +48,40 @@ button:hover {
     border-radius: 20%;
   }
 
-  /* Login Modal Content*/
-.modal-content {
-  background-color: #F8F9B3;
-  margin-left: 10%;
-  padding: 20px;
-  border: 1px solid #888;
-  height: 20%;
-  width: 70%;
-  margin-top: 20%
-}
-
-.user-logout {
-  display: none;
-  height: 30px;
-  width: 30px;
-}
-
-.accordion {
-  display: none;
-}
-
-
-/*slider*/
-body {
-  font-family: "Lato", sans-serif;
-}
-
-.sidenav {
-  height: 90%;
-  width: 0;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: #111;
-  overflow-x: hidden;
-  transition: 0.5s;
-  padding-top: 60px;
-}
-
-.sidenav a {
-  padding: 8px 8px 8px 32px;
-  text-decoration: none;
-  color: #818181;
-  display: block;
-  transition: 0.3s;
-}
-
-.sidenav a:hover {
-  color: #f1f1f1;
-}
-
-.sidenav .closebtn {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
-}
-
-@media screen and (max-height: 450px) {
-  .sidenav {
-    padding-top: 15px;
+  /*slider*/
+  .user-sidenav {
+    height: 87%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: whitesmoke;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
   }
-  .sidenav a {
-    font-size: 18px;
+
+  .user-sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+
+  .user-sidenav a:hover {
+    color: #f1f1f1;
+  }
+
+  .user-sidenav .user-closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
   }
 }
-}
-
 
 /***************************************WEB CSS************************************/
 @media screen and (min-width: 1024px) {
@@ -205,31 +108,42 @@ body {
     height: 21px;
     width: 30px;
   }
-  
-    /* Modal Content/Box */
-.modal-content {
-  background-color: #F8F9B3;
-  margin: 10% auto; /* 15% from the top and centered */
-  padding: 20px;
-  border: 1px solid #888;
-  height: 25%;
-  width: 20%; /* Could be more or less, depending on screen size */
-}
 
   label {
     margin-left: 100%;
   }
 
-  input {
-    width: 90%;
-    height: 20%;
-    margin-left: 5%;
-  }
-
-  /* Set a style for all buttons */
-  button {
-    width: 30%;
-    margin-left: 65%;
-    margin-top: 10%;
-  }
+    /*slider*/
+    .user-sidenav {
+      height: 87%;
+      width: 0;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      background-color: whitesmoke;
+      overflow-x: hidden;
+      transition: 0.5s;
+      padding-top: 60px;
+    }
+  
+    .user-sidenav a {
+      padding: 8px 8px 8px 32px;
+      text-decoration: none;
+      color: #818181;
+      display: block;
+      transition: 0.3s;
+    }
+  
+    .user-sidenav a:hover {
+      color: #f1f1f1;
+    }
+  
+    .user-sidenav .user-closebtn {
+      position: absolute;
+      top: 0;
+      right: 25px;
+      font-size: 36px;
+      margin-left: 50px;
+    }
 }

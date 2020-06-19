@@ -3,68 +3,100 @@
     <img
       src="../../../assets/login-nav-bar.svg"
       alt="Avatar"
-      class="user-login-img" 
-      (click)="showLoginModal()"
+      class="user-login-img"
+      (click)="openUserNav()"
     />
-    <label for="login" (click)="showLoginModal()">Login</label>
-  </div>
-
-  <div id="logoutPanel" class="user-logout">
-    <img
-      src="../../../assets/login-nav-bar.svg"
-      alt="Hey, User"
-      class="user-login-img" 
-    />
-    <label for="logout" (click)="Logout()">Logout</label>
+    <label for="login" (click)="openUserNav()">Login</label>
   </div>
 </div>
 
-<!-- <div class="loggedin-nav-bar" *ngIf="user; let user;" id="loggedinPanel">
-  <img
-    [src]="user.photo"
-    [alt]="user.name"
-    class="user-login"
-  />
-  <label for="loggedin" (click)="showLoginModal()">{{user.name}}</label>
-</div> -->
+<div id="userSidenav" class="user-sidenav">
+  <mat-tab-group mat-align-tabs="center">
+    <mat-tab label="Login">
+      <form class="form">
+        <!--Mobile Number-->
+        <mat-form-field class="full-width">
+          <mat-label>Telephone</mat-label>
+          <span matPrefix>+91 &nbsp;</span>
+          <input type="tel" matInput placeholder="9711323367" required />
+        </mat-form-field>
 
-<div id="login-modal" class="modal">
-  <!-- Modal content -->
-  <div class="modal-content">
-    <img
-      src="../../../assets/close.svg"
-      class="close"
-      (click)="closeLoginModal()"
-    />
-    <div>
-      <input
-        type="text"
-        class="mobnum"
-        placeholder="Enter mobile number.."
-        pattern="[0-9]*" 
-        minlength="10"
-        maxlength="10"
-        onclick="this.placeholder=''"
-        onblur="this.placeholder='Enter mobile number..'"
-        id="mobnum"
-        required
-      />
+        <!--Password-->
+        <mat-form-field class="full-width">
+          <input
+            matInput
+            placeholder="Password"
+            [type]="hide ? 'password' : 'text'"
+            required
+          />
+          <mat-icon matSuffix (click)="hide = !hide">{{
+            hide ? "visibility_off" : "visibility"
+          }}</mat-icon>
+          <!-- <mat-hint *ngIf="!passwordInput.value">Enter your password</mat-hint> -->
+        </mat-form-field>
 
-      <input
-        type="text"
-        class="otp"
-        pattern="[0-9]*"
-        minlength="5"
-        maxlength="5" 
-        placeholder="Enter otp.."
-        onclick="this.placeholder=''"
-        onblur="this.placeholder='Enter otp..'"
-        id="otp"
-        required
-      />
+        <!--Login Button-->
+        <button mat-button color="primary">Login</button>
+      </form>
 
-      <button type="submit" (click)="toggleMobnOtp()" id="mobnumBtn">Next..</button>
-      <button type="submit" (click)="showUserProfile()" id="otpBtn" class="otpBtn">Next..</button>
-    </div>
-  </div>
+    </mat-tab>
+    <mat-tab label="SignUp">
+      <form class="form">
+        <!--Mobile Number-->
+        <mat-form-field class="full-width">
+          <mat-label>Telephone</mat-label>
+          <span matPrefix>+91 &nbsp;</span>
+          <input type="tel" matInput placeholder="9711323367" required />
+        </mat-form-field>
+
+        <!--Password-->
+        <mat-form-field class="full-width">
+          <input
+            matInput
+            placeholder="Password"
+            [type]="hide ? 'password' : 'text'"
+            required
+          />
+          <mat-icon matSuffix (click)="hide = !hide">{{
+            hide ? "visibility_off" : "visibility"
+          }}</mat-icon>
+          <!-- <mat-hint *ngIf="!passwordInput.value">Enter your password</mat-hint> -->
+        </mat-form-field>
+
+        <!--Confirm Password-->
+        <mat-form-field class="full-width">
+          <input
+            matInput
+            placeholder="Confirm Password"
+            [type]="hide ? 'password' : 'text'"
+            required
+          />
+          <mat-icon matSuffix (click)="hide = !hide">{{
+            hide ? "visibility_off" : "visibility"
+          }}</mat-icon>
+          <!-- <mat-hint *ngIf="!passwordInput.value">Enter your password</mat-hint> -->
+        </mat-form-field>
+
+        <!--Email-->
+        <mat-form-field class="full-width">
+          <mat-label>Email (optional)</mat-label>
+          <input
+            matInput
+            [formControl]="emailFormControl"
+            placeholder="Ex. thegrocerypoint@gmail.com"
+          />
+          <mat-error *ngIf="emailFormControl.hasError('email')">
+            Please enter a valid email address
+          </mat-error>
+        </mat-form-field>
+
+        <!--SignUp Button-->
+        <button mat-button color="primary">SignUp</button>
+      </form>
+    </mat-tab>
+  </mat-tab-group>
+
+  <a href="javascript:void(0)" class="user-closebtn" (click)="closeUserNav()"
+    >&times;</a
+  >
 </div>
