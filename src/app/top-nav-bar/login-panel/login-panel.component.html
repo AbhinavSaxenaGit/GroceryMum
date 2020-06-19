@@ -1,4 +1,4 @@
-<div class="login-nav-bar">
+<div class="login-nav-bar" [ngStyle]="{'background-color' : loginColor}">
   <div id="loginPanel" class="user-login">
     <img
       src="../../../assets/login-nav-bar.svg"
@@ -25,6 +25,7 @@
         <mat-form-field class="full-width">
           <input
             matInput
+            #passwordInput
             placeholder="Password"
             [type]="hide ? 'password' : 'text'"
             required
@@ -32,16 +33,28 @@
           <mat-icon matSuffix (click)="hide = !hide">{{
             hide ? "visibility_off" : "visibility"
           }}</mat-icon>
-          <!-- <mat-hint *ngIf="!passwordInput.value">Enter your password</mat-hint> -->
+          <mat-hint *ngIf="!passwordInput.value">Enter your password</mat-hint>
         </mat-form-field>
 
         <!--Login Button-->
-        <button mat-button color="primary">Login</button>
+        <button mat-raised-button color="primary">Login</button>
       </form>
 
     </mat-tab>
     <mat-tab label="SignUp">
       <form class="form">
+        <!--First Name-->
+        <mat-form-field class="full-width">
+          <mat-label>First Name</mat-label>
+          <input matInput placeholder="Your first name" required>
+        </mat-form-field>
+
+        <!--Last Name-->
+        <mat-form-field class="full-width">
+          <mat-label>Last Name</mat-label>
+          <input matInput placeholder="Your last name">
+        </mat-form-field>
+
         <!--Mobile Number-->
         <mat-form-field class="full-width">
           <mat-label>Telephone</mat-label>
@@ -60,7 +73,6 @@
           <mat-icon matSuffix (click)="hide = !hide">{{
             hide ? "visibility_off" : "visibility"
           }}</mat-icon>
-          <!-- <mat-hint *ngIf="!passwordInput.value">Enter your password</mat-hint> -->
         </mat-form-field>
 
         <!--Confirm Password-->
@@ -91,7 +103,7 @@
         </mat-form-field>
 
         <!--SignUp Button-->
-        <button mat-button color="primary">SignUp</button>
+        <button mat-raised-button color="primary">SignUp</button>
       </form>
     </mat-tab>
   </mat-tab-group>

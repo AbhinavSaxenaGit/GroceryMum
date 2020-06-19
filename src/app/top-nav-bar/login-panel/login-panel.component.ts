@@ -32,13 +32,12 @@ export class LoginPanelComponent implements OnInit {
 
   user = [{ name: 'Abhinav', photo: '../../../assets/pp.jpg' }];
 
-  locationColor = '';
+  loginColor = '';
 
   openUserNav() {
     if (this.isElementForMobile) {
     document.getElementById('userSidenav').style.width = '100%';
-    document.getElementById('userSidenav').style.backgroundColor ='darkstaleblue';
-    this.locationColor = 'darkstaleblue';
+    this.loginColor = '#3b5998';
     }
     else {
       document.getElementById('userSidenav').style.width = '40%';
@@ -47,6 +46,6 @@ export class LoginPanelComponent implements OnInit {
 
   closeUserNav() {
     document.getElementById('userSidenav').style.width = '0';
-    this.locationColor = 'smokewhite';
+    this.loginColor = this.isElementForMobile ? 'whitesmoke' : '';
   }
 }

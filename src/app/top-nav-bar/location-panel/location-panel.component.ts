@@ -30,8 +30,7 @@ export class LocationPanelComponent implements OnInit {
 
   openLocationNav() {
     document.getElementById("locationSidenav").style.width = "100%";
-    document.getElementById("navBarLocation").style.backgroundColor='darkstaleblue';
-    this.locationColor = 'darkstaleblue';
+    this.locationColor = '#3b5998';
   }
   
   closeLocationNav() {

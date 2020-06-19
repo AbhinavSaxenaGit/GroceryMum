@@ -1,4 +1,4 @@
-<div class="nav-bar-location" id="navBarLocation">
+<div class="nav-bar-location" [ngStyle]="{'background-color' : locationColor}">
   <img
     *ngIf="isElementForMobile"
     src="../../../assets/location.svg"

@@ -16,13 +16,13 @@ export class HamburgerComponent implements OnInit {
   
   openHamburgerNav() {
     document.getElementById("hbSidenav").style.width = "100%";
-    this.color = 'darkslateblue';
+    this.color = '#3b5998';
   }
   
   closeHamburgerNav() {
     // alert(this.color);
     document.getElementById("hbSidenav").style.width = "0";
-    this.color = 'smokewhite';
+    this.color = 'whitesmoke';
     // alert(this.color);
   }
 

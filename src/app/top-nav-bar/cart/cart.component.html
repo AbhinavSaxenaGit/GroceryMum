@@ -1,39 +1,17 @@
-<div class="cart-nav-bar" id="cartPanel">
+<div class="cart-nav-bar" id="cartPanel" [ngStyle]="{'background-color' : cartColor}">
   <img
     id="cartImg"
     src="../../../assets/cart.svg"
     alt="Cart"
-    class="user-cart"/>
-    <!-- (click)="openCartNav()"
-  /> -->
-  <label for="login" (click)="showCartSideBar()">My Cart</label>
+    class="user-cart"
+    (click)="openCartNav()"
+  />
+  <label for="login" (click)="openCartNav()">My Cart</label>
 </div>
-<!-- 
-<div id="sidebar" class="side-bar-background">
-  <div id="cartmodal" class="side-bar-content">
-    <img
-      src="../../../assets/close.svg"
-      class="close"
-      (click)="closeCartSideBar()"
-    />
-    <img src="../../../assets/checkout.png" class="checkout" />
-  </div>
-</div> -->
 
-<!-- <div class="cart-sliding-panel">
+<div>
   <div id="cartSidenav" class="cart-sidenav">
     <a href="javascript:void(0)" class="cart-closebtn" (click)="closeCartNav()"
       >&times;</a
-    >
-    <a href="#">Top selling items</a>
-    <a href="#">Oils</a>
-    <a href="#">Cold Drinks</a>
-    <a href="#">Baby Products</a>
-    <a href="#">Beverages</a>
-    <a href="#">Bread & Bakery</a>
-    <a href="#">Breakfast & Cereal</a>
-    <a href="#">Canned Goods & Soups</a>
-    <a href="#">Condiments/Spices & Bake</a>
-    <a href="#">Cookies, Snacks & Candy</a>
-  </div>
-</div> -->
+    > 
+</div>

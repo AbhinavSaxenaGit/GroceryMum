@@ -9,30 +9,32 @@ export class CartComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
-  }
+  isElementForWeb = false;
+  isElementForMobile = false;
+  cartColor = '';
 
-  clickCart() {
-    let element = document.getElementById("cartImg");
-    element.classList.toggle("user-cart-selected");
-}
-  showCartSideBar() {
-    let sidebar = document.getElementById("sidebar");
-    sidebar.style.display = 'block';
+  ngOnInit() {
+    if (window.screen.width <= 1024) { 
+      this.isElementForMobile = true;
+    }
+    else {
+      this.isElementForWeb = true;
+    }
   }
-
-  closeCartSideBar() {
-    let background = document.getElementById('sidebar');
-    background.style.display = 'none';
-  }
-
   
-  // openCartNav() {
-  //   document.getElementById("cartSidenav").style.width = "100%";
-  // }
+  openCartNav() {
+    if (this.isElementForMobile) {
+      document.getElementById('cartSidenav').style.width = '100%';
+      this.cartColor = '#3b5998';
+      }
+      else {
+        document.getElementById('cartSidenav').style.width = '40%';
+      }
+    }
   
-  // closeCartNav() {
-  //   document.getElementById("cartSidenav").style.width = "0";
-  // }
+  closeCartNav() {
+    document.getElementById("cartSidenav").style.width = "0";
+    this.cartColor = this.isElementForMobile ? 'whitesmoke' : '';
+  }
 
 }
