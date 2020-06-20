@@ -1,0 +1,15 @@
+<div class="popular-items-accordion">
+    <div class="previous">
+        <button mat-fab color="primary" class="previous"><</button>
+    </div>
+
+    <div class="items" *ngFor="let item of items">
+        <img [src]="item.imgURL" class="item-img" />
+        <a href="#" class="item-name">{{item.name}}</a>
+    </div>
+
+    <div class="next">
+        <button mat-fab color="primary" class="next">></button>
+    </div>
+
+</div>

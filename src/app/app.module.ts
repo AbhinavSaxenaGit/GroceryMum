@@ -17,6 +17,7 @@ import {MatInputModule} from '@angular/material/input';
 import {MatButtonModule} from '@angular/material/button';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {MatIconModule} from '@angular/material/icon';
+import { PopularItemsComponent } from './popular-items/popular-items.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import {MatIconModule} from '@angular/material/icon';
     CartComponent,
     HomeComponent,
     HamburgerComponent,
+    PopularItemsComponent,
   ],
   imports: [
     BrowserModule,

@@ -95,6 +95,7 @@ button
   .user-login {
     height: 21px;
     width: 30px;
+    margin-top: 5px;
   }
 
   .user-login-img {
