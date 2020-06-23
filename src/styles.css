@@ -3,7 +3,7 @@
 * {
   /*This is to manage font throguhout the application*/
   font-family: "Roboto";
-  border-radius: 5px;
+  /* border-radius: 5px; */
 }
 
 mat-select {

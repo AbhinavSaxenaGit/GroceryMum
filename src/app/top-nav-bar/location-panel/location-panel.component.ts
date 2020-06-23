@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { LocationsService } from './../../services/locations/locations.service';
+import { ILocations } from 'src/app/services/locations/locations';
+import { BrowserStack } from 'protractor/built/driverProviders';
 
 @Component({
   selector: 'app-location-panel',
@@ -8,33 +11,38 @@ import { Component, OnInit } from '@angular/core';
 export class LocationPanelComponent implements OnInit {
   isElementForMobile = false;
   isElementForWeb = false;
-
-  locations = [
-    { id: 1, name: 'Ghaziabad' },
-    { id: 2, name: 'Raj Nagar' },
-    { id: 3, name: 'Extension' }
-  ];
-  
-  constructor() {}
-
-  ngOnInit() {
-    if (window.screen.width <= 1024) { 
-      this.isElementForMobile = true;
-    }
-    else {
-      this.isElementForWeb = true;
-    }
-  }
-
   locationColor = '';
 
+
+  locations: ILocations[] = [];
+
+  constructor(private _locationsService: LocationsService) {}
+
+  ngOnInit() {
+    if (window.screen.width <= 1024) {
+      this.isElementForMobile = true;
+    } else {
+      this.isElementForWeb = true;
+    }
+
+    //Bringing locations
+    this.getLocations();
+  }
+
   openLocationNav() {
-    document.getElementById("locationSidenav").style.width = "100%";
+    document.getElementById('locationSidenav').style.width = '100%';
     this.locationColor = '#3b5998';
   }
-  
+
   closeLocationNav() {
-    document.getElementById("locationSidenav").style.width = "0";
+    document.getElementById('locationSidenav').style.width = '0';
     this.locationColor = 'whitesmoke';
+  }
+
+  //Services
+  getLocations() {
+    this._locationsService.getLocations().subscribe((data) => {
+      this.locations = data;
+    });
   }
 }

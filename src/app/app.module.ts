@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { TopNavBarComponent } from './top-nav-bar/top-nav-bar.component';
 import { BackgroundComponent } from './background/background.component';
@@ -11,13 +11,17 @@ import { CartComponent } from './top-nav-bar/cart/cart.component';
 import { HomeComponent } from './top-nav-bar/home/home.component';
 import { HamburgerComponent } from './top-nav-bar/hamburger/hamburger.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatSelectModule} from '@angular/material/select';
-import {MatTabsModule} from '@angular/material/tabs';
-import {MatInputModule} from '@angular/material/input';
-import {MatButtonModule} from '@angular/material/button';
-import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import {MatIconModule} from '@angular/material/icon';
+import { MatSelectModule} from '@angular/material/select';
+import { MatTabsModule} from '@angular/material/tabs';
+import { MatInputModule} from '@angular/material/input';
+import { MatButtonModule} from '@angular/material/button';
+import { FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { MatIconModule} from '@angular/material/icon';
 import { PopularItemsComponent } from './popular-items/popular-items.component';
+import { MatTreeModule } from '@angular/material/tree';
+
+import {LocationsService} from './services/locations/locations.service';
+import { ItemsGridComponent } from './items-grid/items-grid.component';
 
 @NgModule({
   declarations: [
@@ -31,8 +35,10 @@ import { PopularItemsComponent } from './popular-items/popular-items.component';
     HomeComponent,
     HamburgerComponent,
     PopularItemsComponent,
+    ItemsGridComponent,
   ],
   imports: [
+    HttpClientModule,
     BrowserModule,
     BrowserAnimationsModule,
     MatSelectModule,
@@ -42,8 +48,9 @@ import { PopularItemsComponent } from './popular-items/popular-items.component';
     ReactiveFormsModule,
     MatIconModule,
     MatButtonModule,
+    MatTreeModule,
   ],
-  providers: [],
+  providers: [LocationsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

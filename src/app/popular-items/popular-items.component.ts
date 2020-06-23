@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { url } from 'inspector';
 
 @Component({
   selector: 'app-popular-items',

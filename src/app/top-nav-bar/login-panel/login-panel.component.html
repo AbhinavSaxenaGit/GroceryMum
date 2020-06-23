@@ -42,24 +42,30 @@
 
     </mat-tab>
     <mat-tab label="SignUp">
-      <form class="form">
+      <form class="form" (ngSubmit)="onSubmitSignup()">
         <!--First Name-->
         <mat-form-field class="full-width">
           <mat-label>First Name</mat-label>
-          <input matInput placeholder="Your first name" required>
+          <input matInput placeholder="Your first name" required 
+            [(ngModel)]="userSignUpInfo.firstName"
+            [ngModelOptions]="{standalone:true}">
         </mat-form-field>
 
         <!--Last Name-->
         <mat-form-field class="full-width">
           <mat-label>Last Name</mat-label>
-          <input matInput placeholder="Your last name">
+          <input matInput placeholder="Your last name" 
+            [(ngModel)]="userSignUpInfo.lastName"
+            [ngModelOptions]="{standalone:true}">
         </mat-form-field>
 
         <!--Mobile Number-->
         <mat-form-field class="full-width">
           <mat-label>Telephone</mat-label>
           <span matPrefix>+91 &nbsp;</span>
-          <input type="tel" matInput placeholder="9711323367" required />
+          <input type="tel" matInput placeholder="9711323367" required 
+            [(ngModel)]="userSignUpInfo.mobileNumber"
+            [ngModelOptions]="{standalone:true}"/>
         </mat-form-field>
 
         <!--Password-->
@@ -69,6 +75,8 @@
             placeholder="Password"
             [type]="hide ? 'password' : 'text'"
             required
+            [(ngModel)]="userSignUpInfo.password"
+            [ngModelOptions]="{standalone:true}"
           />
           <mat-icon matSuffix (click)="hide = !hide">{{
             hide ? "visibility_off" : "visibility"
@@ -96,6 +104,8 @@
             matInput
             [formControl]="emailFormControl"
             placeholder="Ex. thegrocerypoint@gmail.com"
+            [(ngModel)]="userSignUpInfo.email"
+            [ngModelOptions]="{standalone:true}"
           />
           <mat-error *ngIf="emailFormControl.hasError('email')">
             Please enter a valid email address

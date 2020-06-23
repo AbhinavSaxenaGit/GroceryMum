@@ -23,10 +23,8 @@
 
   div.next {
     width: 7%;
-    left: 93%;
     height: 16%;
     border-left: 1px solid white;
-    position: fixed;
   }
 
   button.previous {
