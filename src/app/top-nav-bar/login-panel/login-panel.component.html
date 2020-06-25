@@ -12,13 +12,18 @@
 
 <div id="userSidenav" class="user-sidenav">
   <mat-tab-group mat-align-tabs="center">
-    <mat-tab label="Login">
-      <form class="form">
+    <mat-tab label="Login" id="loginTab">
+      <form class="form" (ngSubmit)="login()">
         <!--Mobile Number-->
-        <mat-form-field class="full-width">
+        <mat-form-field class="full-width">          
           <mat-label>Telephone</mat-label>
           <span matPrefix>+91 &nbsp;</span>
-          <input type="tel" matInput placeholder="9711323367" required />
+          <input type="tel" matInput placeholder="9711323367" required 
+          [(ngModel)]="userLoginInfo.mobileNumber"
+          [ngModelOptions]="{standalone:true}"
+          pattern="[1-9]{1}[0-9]{9}"
+          length="10"
+          maxlength="10"/>
         </mat-form-field>
 
         <!--Password-->
@@ -29,6 +34,8 @@
             placeholder="Password"
             [type]="hide ? 'password' : 'text'"
             required
+            [(ngModel)]="userLoginInfo.password"
+            [ngModelOptions]="{standalone:true}"
           />
           <mat-icon matSuffix (click)="hide = !hide">{{
             hide ? "visibility_off" : "visibility"
@@ -47,8 +54,9 @@
         <mat-form-field class="full-width">
           <mat-label>First Name</mat-label>
           <input matInput placeholder="Your first name" required 
-            [(ngModel)]="userSignUpInfo.firstName"
-            [ngModelOptions]="{standalone:true}">
+            [(ngModel)]="userSignUpInfo.firstName" #firstName
+            [ngModelOptions]="{standalone:true}"
+            onkeypress="return event.charCode != 32">
         </mat-form-field>
 
         <!--Last Name-->
@@ -56,16 +64,21 @@
           <mat-label>Last Name</mat-label>
           <input matInput placeholder="Your last name" 
             [(ngModel)]="userSignUpInfo.lastName"
-            [ngModelOptions]="{standalone:true}">
+            [ngModelOptions]="{standalone:true}"
+            onkeypress="return event.charCode != 32">
         </mat-form-field>
 
         <!--Mobile Number-->
         <mat-form-field class="full-width">
-          <mat-label>Telephone</mat-label>
+          <mat-label>Mobile Number</mat-label>
           <span matPrefix>+91 &nbsp;</span>
           <input type="tel" matInput placeholder="9711323367" required 
             [(ngModel)]="userSignUpInfo.mobileNumber"
-            [ngModelOptions]="{standalone:true}"/>
+            [ngModelOptions]="{standalone:true}"
+            pattern="[1-9]{1}[0-9]{9}"
+            length="10"
+            maxlength="10"/>
+          <mat-error>Please enter valid 10 digits mobile number...</mat-error>
         </mat-form-field>
 
         <!--Password-->
@@ -90,26 +103,25 @@
             placeholder="Confirm Password"
             [type]="hide ? 'password' : 'text'"
             required
+            [(ngModel)]="userSignUpInfo.confirmPassword"
+            [ngModelOptions]="{standalone:true}"     
           />
           <mat-icon matSuffix (click)="hide = !hide">{{
             hide ? "visibility_off" : "visibility"
           }}</mat-icon>
-          <!-- <mat-hint *ngIf="!passwordInput.value">Enter your password</mat-hint> -->
         </mat-form-field>
 
         <!--Email-->
         <mat-form-field class="full-width">
-          <mat-label>Email (optional)</mat-label>
+          <mat-label>Email</mat-label>
           <input
             matInput
-            [formControl]="emailFormControl"
             placeholder="Ex. thegrocerypoint@gmail.com"
             [(ngModel)]="userSignUpInfo.email"
             [ngModelOptions]="{standalone:true}"
+            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
           />
-          <mat-error *ngIf="emailFormControl.hasError('email')">
-            Please enter a valid email address
-          </mat-error>
+          <mat-error>Please enter a valid email address</mat-error>
         </mat-form-field>
 
         <!--SignUp Button-->

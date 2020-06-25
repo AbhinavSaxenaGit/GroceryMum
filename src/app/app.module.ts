@@ -19,8 +19,7 @@ import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { MatIconModule} from '@angular/material/icon';
 import { PopularItemsComponent } from './popular-items/popular-items.component';
 import { MatTreeModule } from '@angular/material/tree';
-
-import {LocationsService} from './services/locations/locations.service';
+import { ToastrModule } from 'ngx-toastr';
 import { ItemsGridComponent } from './items-grid/items-grid.component';
 
 @NgModule({
@@ -49,8 +48,9 @@ import { ItemsGridComponent } from './items-grid/items-grid.component';
     MatIconModule,
     MatButtonModule,
     MatTreeModule,
+    ToastrModule.forRoot(),
   ],
-  providers: [LocationsService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

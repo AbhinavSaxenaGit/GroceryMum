@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { LocationsService } from './../../services/locations/locations.service';
-import { ILocations } from 'src/app/services/locations/locations';
-import { BrowserStack } from 'protractor/built/driverProviders';
+import { LocationsService } from '../../services/locations.service';
+import { ILocations } from 'src/app/services/templates';
 
 @Component({
   selector: 'app-location-panel',
