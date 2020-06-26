@@ -8,7 +8,7 @@ export class LoginService {
 
   constructor(private _http: HttpClient) { }
 
-  _url ='http://localhost:3600/auth';
+  _url ='http://localhost:3600/login';
 
   login(userLoginInfo) {
     return this._http.post(this._url, userLoginInfo, {observe: 'response'});

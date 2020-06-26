@@ -77,6 +77,11 @@ export class LoginPanelComponent implements OnInit {
                 (data) => {
                           if (data.status == 201) { //new user
                             this.toastr.success("You've sucessfully regsitered...");
+
+                            //Attemptig login
+                            this.userLoginInfo.mobileNumber = this.userSignUpInfo.mobileNumber;
+                            this.userLoginInfo.password = this.userSignUpInfo.password;
+                            this.onSubmitLogin();
                           }
                           if (data.status == 200) { //existing user
                             this.toastr.warning("You're already registered, please login...");
@@ -99,7 +104,7 @@ export class LoginPanelComponent implements OnInit {
   }
 
   //Login
-  login() {
+  onSubmitLogin() {
     if (
       this.userLoginInfo.mobileNumber != null &&
       this.userLoginInfo.password != null
@@ -108,13 +113,16 @@ export class LoginPanelComponent implements OnInit {
         (data) => {
                   this.postLoginInfo = <any>(data).body;
                   if (data.status == 201) { //sucessful login
-                    
                     this.toastr.success("Welcome, " + JSON.stringify(this.postLoginInfo.firstName + "!!"));
+                    this.closeUserNav();
+                    localStorage.setItem('token', JSON.stringify(this.postLoginInfo.accessToken));
+                    window.location.reload(); //Refresing the page
                   }
                 },
         (error) => {
                   if (error) {
-                    this.toastr.error(JSON.stringify(this.postLoginInfo.message));
+                    this.postLoginInfo = <any>(error);
+                    this.toastr.error(this.postLoginInfo.message);//JSON.stringify(this.postLoginInfo.message));
                   }
         }
       );

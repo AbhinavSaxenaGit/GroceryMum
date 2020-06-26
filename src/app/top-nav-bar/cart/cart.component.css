@@ -91,5 +91,10 @@
   .user-cart {
     height: 21px;
     width: 30px;
+    cursor: pointer;
+  }
+
+  label {
+    cursor: pointer;
   }
 }

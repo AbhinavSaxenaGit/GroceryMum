@@ -1,6 +1,6 @@
 input.searchBtn {
   background-image: url(../../../assets/lens.svg);
-  background-size: 70%;
+  background-size: 50%;
   background-position: 50%, 50%;
   background-color: rgb(255, 255, 255);
 }
@@ -58,6 +58,7 @@ input.searchBtn {
     border-radius: 2px 0px 0px 2px;
     padding: 0px 10px;
     display: flex;
+    outline: none;
   }
 
   /* Set a style for all buttons */
@@ -70,5 +71,6 @@ input.searchBtn {
     height: 40px;
     width: 10%;
     margin-left: 83%;
+    outline: none;
   }
 }

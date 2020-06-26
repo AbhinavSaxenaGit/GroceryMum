@@ -13,17 +13,18 @@
 <div id="userSidenav" class="user-sidenav">
   <mat-tab-group mat-align-tabs="center">
     <mat-tab label="Login" id="loginTab">
-      <form class="form" (ngSubmit)="login()">
+      <form class="form">
         <!--Mobile Number-->
         <mat-form-field class="full-width">          
-          <mat-label>Telephone</mat-label>
+          <mat-label>Mobile Number</mat-label>
           <span matPrefix>+91 &nbsp;</span>
-          <input type="tel" matInput placeholder="9711323367" required 
+          <input type="tel" matInput placeholder="9711323367" required
           [(ngModel)]="userLoginInfo.mobileNumber"
           [ngModelOptions]="{standalone:true}"
           pattern="[1-9]{1}[0-9]{9}"
           length="10"
           maxlength="10"/>
+          <mat-error>Please enter valid 10 digits mobile number...</mat-error>
         </mat-form-field>
 
         <!--Password-->
@@ -40,16 +41,16 @@
           <mat-icon matSuffix (click)="hide = !hide">{{
             hide ? "visibility_off" : "visibility"
           }}</mat-icon>
-          <mat-hint *ngIf="!passwordInput.value">Enter your password</mat-hint>
+          <mat-error>Please enter your password...</mat-error>
         </mat-form-field>
 
         <!--Login Button-->
-        <button mat-raised-button color="primary">Login</button>
+        <button mat-raised-button color="primary" (click)="onSubmitLogin()">Login</button>
       </form>
 
     </mat-tab>
     <mat-tab label="SignUp">
-      <form class="form" (ngSubmit)="onSubmitSignup()">
+      <form class="form">
         <!--First Name-->
         <mat-form-field class="full-width">
           <mat-label>First Name</mat-label>
@@ -125,7 +126,7 @@
         </mat-form-field>
 
         <!--SignUp Button-->
-        <button mat-raised-button color="primary">SignUp</button>
+        <button mat-raised-button color="primary" (click)="onSubmitSignup()">SignUp</button>
       </form>
     </mat-tab>
   </mat-tab-group>

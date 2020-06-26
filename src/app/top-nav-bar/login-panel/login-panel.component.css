@@ -102,6 +102,7 @@ button
     height: 24px;
     width: 30px;
     position: fixed;
+    cursor: pointer;
   }
 
   .user-logout {
@@ -112,6 +113,7 @@ button
 
   label {
     margin-left: 100%;
+    cursor: pointer;
   }
 
     /*slider*/
