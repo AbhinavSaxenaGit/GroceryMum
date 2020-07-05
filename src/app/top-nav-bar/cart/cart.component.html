@@ -6,11 +6,35 @@
     class="user-cart"
     (click)="openCartNav()"
   />
-  <label for="login" (click)="openCartNav()">My Cart</label>
+  <label for="login" (click)="openCartNav()" *ngIf = "showCartLabel">My Cart</label>
+  <span class="cartItemsCount" *ngIf = "!showCartLabel" (click)="openCartNav()">{{totalItemsCount}}</span>
+  <span class="cartItemsPrice" *ngIf = "!showCartLabel" (click)="openCartNav()">₹ {{totalAmount}}</span>
 </div>
 
 <div>
   <div id="cartSidenav" class="cart-sidenav">
+    <div class="totalItemsInCart">My Cart ({{totalItemsCount}} items - ₹ {{totalAmount}})</div>
+    <div class="items-grid">
+      <div class="products" *ngFor="let product of products">
+        <img [src]="product.Image" class="product-img" />
+        <div class="bottom_bar">
+          <span class="discount">{{product.discount}}% OFF</span>
+          <span class="quantity">{{product.Quantity}}</span>    
+          <span class="brand">{{product.Brand}}</span>    
+          <div class= "counter">
+            <input type="button" value = "-" class="decrease" (click)="removeProduct(product)" 
+                                 [disabled] = "product.count==0"/>
+            <input type="text" class="count" [(ngModel)]=product.count disabled = true/>
+            <input type="button" value = "+" class="increase" (click)="addProductToCart(product)"/>
+          </div>        
+          <span class="mutiply">X</span>
+          <span class="sp">₹{{product.Selling_Price}}</span>
+          <span class="mrp">₹{{product.MRP}}</span>
+          <span class="equal">=</span>
+          <span class="final_sp">₹{{product.Selling_Price*product.count}}</span>
+        </div>
+      </div>
+    </div>
     <a href="javascript:void(0)" class="cart-closebtn" (click)="closeCartNav()"
       >&times;</a
     > 

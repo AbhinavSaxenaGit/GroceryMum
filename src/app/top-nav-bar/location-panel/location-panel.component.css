@@ -79,8 +79,8 @@
 /**********************************WEB******************************/
 @media screen and (min-width: 1024px) {
   .nav-bar-location {
-    position: relative;
-    left: 60%;
+    position: absolute;
+    left: 55%;
   }
 
   .location-closebtn {

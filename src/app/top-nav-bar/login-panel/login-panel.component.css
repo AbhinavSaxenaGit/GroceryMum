@@ -93,6 +93,7 @@ button
   }
 
   .user-login {
+    display: flex;
     height: 21px;
     width: 30px;
     margin-top: 5px;
@@ -101,7 +102,6 @@ button
   .user-login-img {
     height: 24px;
     width: 30px;
-    position: fixed;
     cursor: pointer;
   }
 
@@ -112,7 +112,6 @@ button
   }
 
   label {
-    margin-left: 100%;
     cursor: pointer;
   }
 

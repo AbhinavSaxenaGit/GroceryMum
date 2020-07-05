@@ -13,6 +13,6 @@ export class HomeComponent implements OnInit {
   homeIconColor = '';
 
   homeClick() {
-    this.homeIconColor = '#3b5998';
+    this.homeIconColor = '#f4511e';
   }
 }

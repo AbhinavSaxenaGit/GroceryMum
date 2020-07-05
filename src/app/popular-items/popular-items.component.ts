@@ -1,3 +1,4 @@
+import { element } from 'protractor';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -11,13 +12,18 @@ export class PopularItemsComponent implements OnInit {
   ngOnInit(): void {}
 
   items = [
-    { code: 1, name: 'Top selling items', imgURL: '../assets/1.jpg'},
-    { code: 2, name: 'Oils', imgURL: '../assets/1.jpg'},
-    { code: 3, name: 'Cold Drinks', imgURL: '../assets/1.jpg'},
-    { code: 4, name: 'Baby Products', imgURL: '../assets/1.jpg'},
-    { code: 5, name: 'Beverages', imgURL: '../assets/1.jpg'},
-    { code: 6, name: 'Bread & Bakery', imgURL: '../assets/1.jpg'},
-    { code: 7, name: 'Breakfast & Cereal', imgURL: '../assets/1.jpg'},
-    { code: 8, name: 'Canned Goods', imgURL: '../assets/1.jpg'},
+    { code: 1, name: 'Grocery', imgURL: '../assets/p_item1.jpg'},
+    { code: 2, name: 'Packaged Food', imgURL: '../assets/p_item2.jpg'},
+    { code: 3, name: 'Breakfast', imgURL: '../assets/p_item3.jpg'},
+    { code: 4, name: 'Snacks', imgURL: '../assets/p_item4.jpg'},
+    { code: 5, name: 'Beverages', imgURL: '../assets/p_item5.jpg'},
+    { code: 6, name: 'Bread & Bakery', imgURL: '../assets/p_item6.jpg'},
+    { code: 7, name: 'Household care', imgURL: '../assets/p_item7.jpg'},
+    { code: 8, name: 'Personal Care', imgURL: '../assets/p_item8.jpg'},
+    { code: 9, name: 'Baby Care', imgURL: '../assets/p_item9.jpg'},
   ];
+
+  scrollToItemsGrid() {
+    window.scrollTo(window.scrollX, window.scrollY + 400);
+  }
 }

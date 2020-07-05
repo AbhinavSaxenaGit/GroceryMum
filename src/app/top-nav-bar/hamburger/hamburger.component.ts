@@ -16,7 +16,7 @@ export class HamburgerComponent implements OnInit {
   
   openHamburgerNav() {
     document.getElementById("hbSidenav").style.width = "100%";
-    this.color = '#3b5998';
+    this.color = '#f4511e';
   }
   
   closeHamburgerNav() {

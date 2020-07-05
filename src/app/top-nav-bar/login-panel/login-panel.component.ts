@@ -54,7 +54,7 @@ export class LoginPanelComponent implements OnInit {
   openUserNav() {
     if (this.isElementForMobile) {
       document.getElementById('userSidenav').style.width = '100%';
-      this.loginColor = '#3b5998';
+      this.loginColor = '#f4511e';
     } else {
       document.getElementById('userSidenav').style.width = '25%';
     }

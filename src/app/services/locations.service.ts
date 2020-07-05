@@ -11,7 +11,8 @@ export class LocationsService {
 
   constructor(private _http: HttpClient) { }
 
-  _url ='http://localhost:3600/locations';
+  // _url ='http://localhost:3600/locations';
+  _url ='/assets/Stub/locations.json';
 
   getLocations(): Observable<ILocations[]> {
     return this._http.get<ILocations[]>(this._url);

@@ -10,6 +10,10 @@ mat-select {
   padding: 0px 10px;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /******************************MOBILE********************************/
 @media screen and (max-width: 1024px) {
   body {

@@ -20,11 +20,14 @@
     }
   
     .header {
-      background-color: #3b5998;
+      background-color: #f4511e;
       height: 52px;
       width: 100%;
-      z-index: -2;
+      position: fixed;
+      top: 0;
+      z-index: 2;
       display: inline-flex;
+      box-shadow: 0 2px 2px 0 rgba(0,.33,0,.33);
     }
   }
   

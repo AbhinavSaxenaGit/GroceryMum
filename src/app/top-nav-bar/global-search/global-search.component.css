@@ -47,7 +47,7 @@ input.searchBtn {
     width: 40%;
     height: 40px;
     position: absolute;
-    left: 30%;
+    left: 10%;
     margin-top: 5px;
   }
 
@@ -55,7 +55,7 @@ input.searchBtn {
     width: 80%;
     height: -webkit-fill-available;
     border: none;
-    border-radius: 2px 0px 0px 2px;
+    border-radius: 25px 0px 0px 25px;
     padding: 0px 10px;
     display: flex;
     outline: none;
@@ -65,7 +65,7 @@ input.searchBtn {
   input.searchBtn {
     background-repeat: no-repeat;
     border: none;
-    border-radius: 0px 2px 2px 0px;
+    border-radius: 0px 25px 25px 0px;
     display: flex;
     margin-top: -40px;
     height: 40px;
