@@ -11,7 +11,7 @@
   <span class="cartItemsPrice" *ngIf = "!showCartLabel" (click)="openCartNav()">₹ {{totalAmount}}</span>
 </div>
 
-<div>
+<div class="cartPanelBackground" *ngIf = "showCartPanelBackground"></div>
   <div id="cartSidenav" class="cart-sidenav">
     <div class="totalItemsInCart">My Cart ({{totalItemsCount}} items - ₹ {{totalAmount}})</div>
     <div class="items-grid">
@@ -33,9 +33,6 @@
           <span class="equal">=</span>
           <span class="final_sp">₹{{product.Selling_Price*product.count}}</span>
         </div>
-      </div>
     </div>
-    <a href="javascript:void(0)" class="cart-closebtn" (click)="closeCartNav()"
-      >&times;</a
-    > 
+    <a href="javascript:void(0)" class="cart-closebtn" (click)="closeCartNav()">&times;</a> 
 </div>

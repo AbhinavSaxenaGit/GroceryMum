@@ -2,24 +2,44 @@ import { Component, OnInit } from '@angular/core';
 import { SignupService } from '../../services/signup.service';
 import { LoginService } from '../../services/login.service';
 import { ToastrService } from 'ngx-toastr';
+import {style, state, animate, transition, trigger} from '@angular/animations';
 
 @Component({
   selector: 'app-login-panel',
   templateUrl: './login-panel.component.html',
   styleUrls: ['./login-panel.component.css'],
+  animations: [
+    trigger('fadeInOut', [
+      transition('void => *', [
+        style({opacity:0}),
+        animate(500, style({opacity:1}))
+      ]),
+      transition('* => void', [
+        animate(500, style({opacity:0}))
+      ])
+    ])
+  ]
 })
+
 export class LoginPanelComponent implements OnInit {
-  constructor(private _signUpService: SignupService,
-              private _loginService: LoginService,
-              private toastr: ToastrService) {}
+  constructor(
+    private _signUpService: SignupService,
+    private _loginService: LoginService,
+    private toastr: ToastrService
+  ) {}
 
   isElementForWeb = false;
   isElementForMobile = false;
   hide = true;
   loginColor = '';
+  showPasswordField = false;
+  showSignUpForm = false;
+  isLoginPanelOpen = false;
+  showUserName = false;
+  showLogoutPanel = false;
 
   //For API response
-  statusCode : number;
+  statusCode: number;
   successMessage = null;
   errorMessage = null;
 
@@ -28,20 +48,20 @@ export class LoginPanelComponent implements OnInit {
     lastName: null,
     email: null,
     password: null,
-    confirmPassword : null,
+    confirmPassword: null,
     mobileNumber: null,
   };
 
   userLoginInfo = {
     mobileNumber: null,
-    password: null
+    password: null,
   };
 
   postLoginInfo = {
-    accessToken : null,
-    firstName : null,
-    message : null
-    }
+    accessToken: null,
+    firstName: null,
+    message: null,
+  };
 
   ngOnInit() {
     if (window.screen.width <= 1024) {
@@ -51,56 +71,65 @@ export class LoginPanelComponent implements OnInit {
     }
   }
 
-  openUserNav() {
-    if (this.isElementForMobile) {
-      document.getElementById('userSidenav').style.width = '100%';
-      this.loginColor = '#f4511e';
-    } else {
-      document.getElementById('userSidenav').style.width = '25%';
-    }
-  }
-
-  closeUserNav() {
-    document.getElementById('userSidenav').style.width = '0';
-    this.loginColor = this.isElementForMobile ? 'whitesmoke' : '';
-  }
-
   onSubmitSignup() {
-    if (this.userSignUpInfo.password ===
-        this.userSignUpInfo.confirmPassword) {
-            if (
-              this.userSignUpInfo.firstName != null &&
-              this.userSignUpInfo.mobileNumber != null &&
-              this.userSignUpInfo.password != null
-            ) {
-              this._signUpService.signUp(this.userSignUpInfo).subscribe(
-                (data) => {
-                          if (data.status == 201) { //new user
-                            this.toastr.success("You've sucessfully regsitered...");
+    if (this.userSignUpInfo.password === this.userSignUpInfo.confirmPassword) {
+      if (
+        this.userSignUpInfo.firstName != null &&
+        this.userSignUpInfo.mobileNumber != null &&
+        this.userSignUpInfo.password != null
+      ) {
+        this._signUpService.signUp(this.userSignUpInfo).subscribe(
+          (data) => {
+            if (data.status == 201) {
+              //new user
+              this.toastr.success("You've sucessfully regsitered...");
 
-                            //Attemptig login
-                            this.userLoginInfo.mobileNumber = this.userSignUpInfo.mobileNumber;
-                            this.userLoginInfo.password = this.userSignUpInfo.password;
-                            this.onSubmitLogin();
-                          }
-                          if (data.status == 200) { //existing user
-                            this.toastr.warning("You're already registered, please login...");
-                          }
-                        },
-                (error) => {
-                          if (error) {
-                            this.toastr.error("Something went wrong, please try again...");
-                          }
-                }
-              );
+              //Attemptig login
+              this.userLoginInfo.mobileNumber = this.userSignUpInfo.mobileNumber;
+              this.userLoginInfo.password = this.userSignUpInfo.password;
+              this.onSubmitLogin();
             }
-            else {
-              this.toastr.warning("Please fill the required fields...");
+            if (data.status == 200) {
+              //existing user
+              this.toastr.warning("You're already registered, please login...");
             }
+          },
+          (error) => {
+            if (error) {
+              this.toastr.error('Something went wrong, please try again...');
+            }
+          }
+        );
+      } else {
+        this.toastr.warning('Please fill the required fields...');
       }
-    else {
-      this.toastr.error("Password and Confirm password must be same...")
+    } else {
+      this.toastr.error('Password and Confirm password must be same...');
     }
+  }
+
+  //Verifying if user is registered or not
+  onSubmitMobNo() {
+    if (this.userLoginInfo.mobileNumber != null) {
+      if (this.userLoginInfo.mobileNumber == '9711323367')
+        this.showPasswordField = true;
+      else this.showSignUpForm = true;
+    }
+    else
+      this.toastr.warning("Please enter mobile number...");
+
+    if (this.userLoginInfo.password != null) {
+      if (this.userLoginInfo.password == '0112128651') {
+        this.isLoginPanelOpen = false;
+        this.showUserName = true;
+      }
+      else 
+        this.toastr.warning("Please enter correct password...");      
+    }
+  }
+
+  onCloseButton() {
+    window.location.reload();    
   }
 
   //Login
@@ -111,24 +140,29 @@ export class LoginPanelComponent implements OnInit {
     ) {
       this._loginService.login(this.userLoginInfo).subscribe(
         (data) => {
-                  this.postLoginInfo = <any>(data).body;
-                  if (data.status == 201) { //sucessful login
-                    this.toastr.success("Welcome, " + JSON.stringify(this.postLoginInfo.firstName + "!!"));
-                    this.closeUserNav();
-                    localStorage.setItem('token', JSON.stringify(this.postLoginInfo.accessToken));
-                    window.location.reload(); //Refresing the page
-                  }
-                },
+          this.postLoginInfo = <any>data.body;
+          if (data.status == 201) {
+            //sucessful login
+            this.toastr.success(
+              'Welcome, ' + JSON.stringify(this.postLoginInfo.firstName + '!!')
+            );
+            this.isLoginPanelOpen = false;
+            localStorage.setItem(
+              'token',
+              JSON.stringify(this.postLoginInfo.accessToken)
+            );
+            window.location.reload(); //Refresing the page
+          }
+        },
         (error) => {
-                  if (error) {
-                    this.postLoginInfo = <any>(error);
-                    this.toastr.error(this.postLoginInfo.message);//JSON.stringify(this.postLoginInfo.message));
-                  }
+          if (error) {
+            this.postLoginInfo = <any>error;
+            this.toastr.error(this.postLoginInfo.message); //JSON.stringify(this.postLoginInfo.message));
+          }
         }
       );
-    }
-    else {
-      this.toastr.warning("Please fill the required fields...");
+    } else {
+      this.toastr.warning('Please fill the required fields...');
     }
   }
 }

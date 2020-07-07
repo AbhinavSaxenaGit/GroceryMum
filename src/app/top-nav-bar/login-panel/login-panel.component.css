@@ -1,8 +1,5 @@
 .form {
-  min-width: 150px;
-  max-width: 500px;
-  width: 90%;
-  margin-left: 10px;
+  margin-left: 18px;
 }
 
 .full-width {
@@ -85,6 +82,7 @@ button
 
 /***************************************WEB CSS************************************/
 @media screen and (min-width: 1024px) {
+
   .login-nav-bar {
     width: 8%;
     position: absolute;
@@ -92,7 +90,7 @@ button
     margin-top: 12px;
   }
 
-  .user-login {
+  .user-login { 
     display: flex;
     height: 21px;
     width: 30px;
@@ -105,50 +103,83 @@ button
     cursor: pointer;
   }
 
-  .user-logout {
-    display: none;
-    height: 21px;
-    width: 30px;
+  .loginPanelBackground {
+    background-color: rgba(0,0,0,.7);
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 50px;
   }
 
-  label {
+  .loginPanel {
+    position: fixed;
+    top: 10%;
+    left: 35%;   
+    height: 80%;
+    width: 35%;
+    font-family: Celias, Helvetica;
+  }
+
+  .detailsPanelHeader {
+    background-color: #f4511e;
+    text-align: center;
+    border-bottom: 2px solid white;
+    border-radius: 5px 5px 0px 0px;
+  }
+
+  .detailsPanelBottom {
+    height: 70%;
+    border-radius: 0px 0px 5px 5px;
+  }
+
+  .loginForm {
+    height: 40%;
+    background-color: mintcream;
+    border-radius: 0px 0px 5px 5px;
+  }
+
+  .signUpForm {
+    height: 90%;
+    background-color: mintcream;
+    border-radius: 0px 0px 5px 5px;
+  }
+
+  .login-closebtn {
+    position: absolute;
+    top: 23px;
+    right: 25px;
+    font-size: 36px;
+    text-decoration: none;
+    color: #333;
+  }
+
+  .half-width {
+    margin-left: 10px;
+    width: 45%;
+  }
+
+  .logout {
+    position: absolute;
+    margin-top: 5px;
+    right: 0;
+    margin-left: 5px;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid #333;
     cursor: pointer;
   }
 
-    /*slider*/
-    .user-sidenav {
-      height: 87%;
-      width: 0;
-      position: fixed;
-      z-index: 1;
-      top: 0;
-      left: 0;
-      background-color: whitesmoke;
-      overflow-x: hidden;
-      transition: 0.5s;
-      padding-top: 60px;
-      margin-top: 4%;
-      height: 75%;
-      margin-left: 70%;
-    }
-  
-    .user-sidenav a {
-      padding: 8px 8px 8px 32px;
-      text-decoration: none;
-      color: #818181;
-      display: block;
-      transition: 0.3s;
-    }
-  
-    .user-sidenav a:hover {
-      color: #f1f1f1;
-    }
-  
-    .user-sidenav .user-closebtn {
-      position: absolute;
-      top: 0;
-      right: 25px;
-      font-size: 36px;
-      margin-left: 50px;
-    }
+  .logoutPanel {
+    position: absolute;
+    background-color: #333;
+    height: 150%;
+    color: white;
+    text-align: right;
+    font: white;
+    width: 100%;
+    margin-top: 35px;
+    right: 0;
+    cursor: pointer;
+  }
 }

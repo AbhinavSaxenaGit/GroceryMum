@@ -6,7 +6,7 @@
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: whitesmoke;
+  background-color: #f4511e;
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 60px;
@@ -89,6 +89,15 @@
     margin-left: 5px;
   }
 
+  .cartPanelBackground {
+    background-color: rgba(0,0,0,.7);
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 50px;
+  }
+
   .totalItemsInCart {
     position: absolute;
     margin-top: -7.5%;
@@ -96,7 +105,7 @@
     font-size: 20px;
     font-family: Celias, Helvetica;
     font-weight: bold;
-    color: #f4511e;
+    color: #ffffff;
   }
 
   .cart-nav-bar {
@@ -125,6 +134,7 @@
 
   div.items-grid {
     height: -webkit-fill-available;
+    margin-top: -8px;
     background-color: white;
   }
 
