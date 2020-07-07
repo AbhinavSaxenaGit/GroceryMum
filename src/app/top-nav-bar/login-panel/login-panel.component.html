@@ -7,7 +7,7 @@
       (click)="isLoginPanelOpen=true"
       *ngIf="!showUserName"
     />
-    <label *ngIf="!showUserName" (click)="isLoginPanelOpen=true">Login</label>
+    <label *ngIf="!showUserName" (click)="isLoginPanelOpen=true" style="cursor: pointer;">Login</label>
     <label *ngIf="showUserName" username style="position: absolute">Hey, Sagar!</label>    
     <span *ngIf="showUserName" class="logout" (click)="showLogoutPanel=true"></span>
     <div *ngIf="showLogoutPanel" class="logoutPanel" (click)="onCloseButton()">
@@ -20,7 +20,7 @@
   <div class="loginPanel" *ngIf="isLoginPanelOpen" [@fadeInOut]>
     
     <div class="detailsPanelHeader">
-      <h3>The Grocery Point</h3>
+      <span class="title">The Grocery Point</span>
 
       <a href="javascript:void(0)" class="login-closebtn" (click)="onCloseButton()">&times;</a>
     </div>

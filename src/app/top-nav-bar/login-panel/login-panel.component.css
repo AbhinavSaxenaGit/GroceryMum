@@ -147,7 +147,7 @@ button
 
   .login-closebtn {
     position: absolute;
-    top: 23px;
+    top: 4px;
     right: 25px;
     font-size: 36px;
     text-decoration: none;
@@ -173,7 +173,8 @@ button
   .logoutPanel {
     position: absolute;
     background-color: #333;
-    height: 150%;
+    opacity: .8;
+    height: 90%;
     color: white;
     text-align: right;
     font: white;
@@ -181,5 +182,12 @@ button
     margin-top: 35px;
     right: 0;
     cursor: pointer;
+  }
+
+  span.title {
+    font-size: 25px;
+    color: white;
+    vertical-align: middle;
+    line-height: 50px;
   }
 }
