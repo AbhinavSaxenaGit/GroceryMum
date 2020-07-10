@@ -10,6 +10,7 @@
 button
 {
   margin-left: 78%;
+  margin-bottom: 10px;
 }
 
 /***************************************MOBILE CSS************************************/
@@ -114,7 +115,7 @@ button
 
   .loginPanel {
     position: fixed;
-    top: 10%;
+    top: 20%;
     left: 35%;   
     height: 80%;
     width: 35%;
@@ -134,13 +135,11 @@ button
   }
 
   .loginForm {
-    height: 40%;
     background-color: mintcream;
     border-radius: 0px 0px 5px 5px;
   }
 
   .signUpForm {
-    height: 90%;
     background-color: mintcream;
     border-radius: 0px 0px 5px 5px;
   }

@@ -1,0 +1,133 @@
+[
+  {
+    "code": 1,
+    "name": "Grocery",
+    "imgURL": "../assets/p_item1.png",
+    "subcategory": [
+      {
+        "code": 101,
+        "name": "Item name 101"
+      },
+      {
+        "code": 102,
+        "name": "Item name 102",
+        "subcategory": [
+          {
+            "code": 1001,
+            "name": "Item name 1001"
+          },
+          {
+            "code": 1002,
+            "name": "Item name 1002"
+          },
+          {
+            "code": 1003,
+            "name": "Item name 1003"
+          },
+          {
+            "code": 1004,
+            "name": "Item name 1004"
+          },
+          {
+            "code": 1005,
+            "name": "Item name 1005"
+          },
+          {
+            "code": 1006,
+            "name": "Item name 1006"
+          }
+        ]
+      },
+      {
+        "code": 103,
+        "name": "Item name 103",
+        "subcategory": [
+          {
+            "code": 1007,
+            "name": "Item name 1007"
+          },
+          {
+            "code": 1008,
+            "name": "Item name 1008"
+          }
+        ]
+      },
+      {
+        "code": 104,
+        "name": "Item name 104"
+      },
+      {
+        "code": 105,
+        "name": "Item name 105"
+      },
+      {
+        "code": 106,
+        "name": "Item name 106"
+      }
+    ]
+  },
+  {
+    "code": 2,
+    "name": "Packaged Food",
+    "imgURL": "../assets/p_item2.png",
+    "subcategory": [
+      {
+        "code": 107,
+        "name": "Item name 107"
+      },
+      {
+        "code": 108,
+        "name": "Item name 108"
+      }
+    ]
+  },
+  {
+    "code": 3,
+    "name": "Breakfast",
+    "imgURL": "../assets/p_item3.png",
+    "subcategory": [
+      {
+        "code": 109,
+        "name": "Item name 109"
+      },
+      {
+        "code": 110,
+        "name": "Item name 110"
+      },
+      {
+        "code": 111,
+        "name": "Item name 111"
+      }
+    ]
+  },
+  {
+    "code": 4,
+    "name": "Snacks",
+    "imgURL": "../assets/p_item4.png"
+  },
+  {
+    "code": 5,
+    "name": "Beverages",
+    "imgURL": "../assets/p_item5.png"
+  },
+  {
+    "code": 6,
+    "name": "Bread & Bakery",
+    "imgURL": "../assets/p_item6.jpg"
+  },
+  {
+    "code": 7,
+    "name": "Household care",
+    "imgURL": "../assets/p_item7.png"
+  },
+  {
+    "code": 8,
+    "name": "Personal Care",
+    "imgURL": "../assets/p_item8.png"
+  },
+  {
+    "code": 9,
+    "name": "Baby Care",
+    "imgURL": "../assets/p_item9.png"
+  }
+]

@@ -1,11 +1,12 @@
-.popular-items-accordion {
+.popular-category-accordion {
   display: none;
 }
 
 /***************************************WEB CSS************************************/
 @media screen and (min-width: 1024px) {
-
   .daily-shop-img {
+    position: relative;
+    z-index: -1;
     height: 10%;
     width: 100%;
     cursor: pointer;
@@ -17,7 +18,7 @@
     margin: 2%;
     margin-top: 70px;
     background: white;
-    box-shadow: 0 2px 2px 0 rgba(0,.33,0,.33);
+    box-shadow: 0 2px 2px 0 rgba(0, 0.33, 0, 0.33);
   }
 
   button {
@@ -49,32 +50,78 @@
     font-size: 200%;
   } */
 
-  div.items {
+  div.category {
     height: -webkit-fill-available;
     width: 11%;
-    border-right: 2px solid whitesmoke;    
+    border-right: 2px solid whitesmoke;
   }
 
-  div.items:hover {
-    background-color: #f4511e;  
+  div.category:hover {
+    background-color: #f4511e;
   }
 
-  .item-name {
-    /* border-top: 1px white solid; */
+  .category-name {
     text-decoration: none;
+    position: relative;
     display: block;
     text-align: center;
     font-size: 15px;
     color: #333;
+    margin-bottom: 1em;
   }
 
-  .item-img {
-    margin-left: 22%;
-    margin-top: 3%;
+  .category-img {
+    margin-left: 29%;
+    margin-top: 5%;
     height: 60%;
   }
 
-  .item-img:hover {
-    transform: scale(1.2);
+  .category-img:hover {
+    cursor: pointer;
+  }
+
+  div.subcategory {
+    width: 200%;
+    border: 1px solid gray;
+  }
+
+  li {
+    padding-left: 10px;
+    height: 3em;
+    line-height: 3em;
+    vertical-align: middle;
+    list-style-type: none;
+    background-color: mintcream;
+  }
+
+  li:hover {
+    background-color: #f4511e;
+  }
+
+  .nextArrow {
+    position: absolute;
+    margin-top: 1.3em;
+    margin-left: 9em;
+    border: solid gray;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+  }
+
+  .nextArrow:hover {
+    background-color: #f4511e;
+  }
+
+  div.product {
+    position: relative;
+    top: -100%;
+    left: 100.5%;
+    width: 100%;
+  }
+
+  div.product:hover {
+    background-color: #f4511e;
   }
 }

@@ -3,9 +3,18 @@
         <button mat-fab color="primary" class="previous"><</button>
     </div> -->
 
-    <div class="items" *ngFor="let item of items">
-        <img [src]="item.imgURL" class="item-img" />
-        <a href="#" class="item-name">{{item.name}}</a>
+    <div class="category" *ngFor="let category of categories" (mouseover)="categoryCode=category.code">
+        <img [src]="category.imgURL" class="category-img"/>
+        <a href="#" class="category-name">{{category.name}}</a>
+        <div class="subcategory" *ngIf="category.code==categoryCode">
+            <li *ngFor="let subcategory of category.subcategory"
+                (mouseover)="subCategoryCode=subcategory.code">{{subcategory.name}}
+                <span class="nextArrow" *ngIf="subcategory.subcategory"></span>
+                <div class="product" *ngIf="subcategory.code==subCategoryCode">
+                    <li *ngFor="let product of subcategory.subcategory">{{product.name}}</li>
+                </div>
+            </li>
+        </div>
     </div>
 
     <!-- <div class="next">
