@@ -82,7 +82,6 @@
 
   div.subcategory {
     width: 200%;
-    border: 1px solid gray;
   }
 
   li {
@@ -92,10 +91,12 @@
     vertical-align: middle;
     list-style-type: none;
     background-color: mintcream;
+    z-index: 1;
   }
 
   li:hover {
     background-color: #f4511e;
+    cursor: pointer;
   }
 
   .nextArrow {

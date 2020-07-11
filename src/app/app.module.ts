@@ -21,6 +21,7 @@ import { PopularItemsComponent } from './popular-items/popular-items.component';
 import { MatTreeModule } from '@angular/material/tree';
 import { ToastrModule } from 'ngx-toastr';
 import { ItemsGridComponent } from './items-grid/items-grid.component';
+import { BottomBarComponent } from './bottom-bar/bottom-bar.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { ItemsGridComponent } from './items-grid/items-grid.component';
     HamburgerComponent,
     PopularItemsComponent,
     ItemsGridComponent,
+    BottomBarComponent,
   ],
   imports: [
     HttpClientModule,
