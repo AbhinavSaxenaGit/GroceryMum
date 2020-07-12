@@ -3,12 +3,12 @@
     id="cartImg"
     src="../../../assets/cart.svg"
     alt="Cart"
-    class="user-cart"
+    class="user-cart-img"
     (click)="openCartNav()"
   />
-  <label for="login" (click)="openCartNav()" *ngIf = "showCartLabel">My Cart</label>
-  <span class="cartItemsCount" *ngIf = "!showCartLabel" (click)="openCartNav()">{{totalItemsCount}}</span>
-  <span class="cartItemsPrice" *ngIf = "!showCartLabel" (click)="openCartNav()">₹ {{totalAmount}}</span>
+  <label for="login" (click)="openCartNav()" *ngIf = "showCartLabel&&isElementForWeb">My Cart</label>
+  <span class="cartItemsCount" *ngIf = "!showCartLabel&&isElementForWeb" (click)="openCartNav()">{{totalItemsCount}}</span>
+  <span class="cartItemsPrice" *ngIf = "!showCartLabel&&isElementForWeb" (click)="openCartNav()">₹ {{totalAmount}}</span>
 </div>
 
 <div class="cartPanelBackground" *ngIf = "showCartPanelBackground"></div>

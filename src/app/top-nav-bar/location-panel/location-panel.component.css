@@ -11,7 +11,7 @@
 }
 
 /*********************************MOBILE*******************************/
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1024px) { 
   .nav-bar-location {
     position: absolute;
     display: grid;
@@ -43,11 +43,10 @@
 
   /*slider*/
   .location-sidenav {
-    height: 87%;
     width: 0;
     position: fixed;
     z-index: 1;
-    top: 0;
+    bottom: 4%;
     left: 0;
     background-color: whitesmoke;
     overflow-x: hidden;

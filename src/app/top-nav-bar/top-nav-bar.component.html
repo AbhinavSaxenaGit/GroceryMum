@@ -1,9 +1,9 @@
 <div class="header">
   <img alt="GroceryMum" class="logo" src="../../../assets/logo.png" *ngIf="isElementForWeb">
-  <app-hamburger></app-hamburger>
-  <app-home></app-home>
-  <app-location-panel></app-location-panel>
   <app-global-search></app-global-search>
-  <app-login-panel></app-login-panel>
-  <app-cart></app-cart>
-</div>
+  <app-hamburger class="menu"></app-hamburger>
+  <app-home class="menu"></app-home>
+  <app-location-panel *ngIf="isElementForWeb"></app-location-panel>
+  <app-login-panel class="menu"></app-login-panel>
+  <app-cart class="menu"></app-cart>
+</div> 

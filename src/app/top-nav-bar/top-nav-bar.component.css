@@ -2,10 +2,17 @@
   @media screen and (max-width: 1024px) {
     .header {
       width: 100%;
+      height: 4em;
       border-top: 1px solid;
       border-radius: 0;
       position: fixed;
-      bottom: 40px;
+      display: flex;
+      bottom: 0;
+      background-color: #f4511e;
+    }
+
+    .menu {
+      margin-left: 12.7%;
     }
   }
   

@@ -13,71 +13,94 @@ button
   margin-bottom: 10px;
 }
 
-/***************************************MOBILE CSS************************************/
+.loginPanelBackground {
+  background-color: rgba(0,0,0,.7);
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 50px;
+}
+
+/***************************************MOBILE CSS************************************/ 
 @media screen and (max-width: 1024px) {
-  .login-nav-bar {
-    position: absolute;
-    display: grid;
-    left: 60%;
-    width: 20%;
-    border-radius: 5px;
-    height: 35px;
-    margin-top: 1px;
-  }
-
-  .user-login {
-    display: grid;
-  }
-
   .user-login-img {
-    height: 35px;
-    width: 40px;
-    margin-top: 3px;
-    margin-left: 21px;
+    width: 55px;
   }
 
   label {
     display: none;
   }
 
-  /* Avatar image */
-  img.avatar {
-    width: 60%;
-    border-radius: 20%;
+  .loginPanelBackground {
+    top: 0;
   }
 
-  /*slider*/
-  .user-sidenav {
-    height: 87%;
-    width: 0;
+  .loginPanel {
     position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: whitesmoke;
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
+    top: 20%;
+    left: 15.5%;
+    width: 70%;
   }
 
-  .user-sidenav a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    color: #818181;
-    display: block;
-    transition: 0.3s;
-  }
-
-  .user-sidenav a:hover {
-    color: #f1f1f1;
-  }
-
-  .user-sidenav .user-closebtn {
+  .user-logged-in {
+    width: 20px;
+    height: 20px;
     position: absolute;
-    top: 0;
+    background-color: lawngreen;
+    border-radius: 50px;
+    margin-left: -3%;
+  }
+
+  .detailsPanelHeader {
+    background-color: #f4511e;
+    text-align: center;
+    border-bottom: 2px solid white;
+    border-radius: 5px 5px 0px 0px;
+  }
+
+  .detailsPanelBottom {
+    height: 70%;
+    border-radius: 0px 0px 5px 5px;
+  }
+
+  .loginForm {
+    background-color: mintcream;
+    border-radius: 0px 0px 5px 5px;
+  }
+
+  .signUpForm {
+    background-color: mintcream;
+    border-radius: 0px 0px 5px 5px;
+  }
+
+  .login-closebtn {
+    position: absolute;
+    top: 4px;
     right: 25px;
     font-size: 36px;
-    margin-left: 50px;
+    text-decoration: none;
+    color: #333;
+  }
+
+  .half-width {
+    margin-left: 10px;
+    width: 45%;
+  }
+
+  .logout {
+    display: none;
+  }
+
+  .logoutPanel {
+    display: none;
+  }
+
+  span.title {
+    font-size: 25px;
+    color: white;
+    vertical-align: middle;
+    line-height: 50px;
   }
 }
 
@@ -105,11 +128,6 @@ button
   }
 
   .loginPanelBackground {
-    background-color: rgba(0,0,0,.7);
-    bottom: 0;
-    left: 0;
-    position: fixed;
-    right: 0;
     top: 50px;
   }
 

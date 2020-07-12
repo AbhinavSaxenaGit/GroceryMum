@@ -6,31 +6,29 @@
 }
 /*********************************MOBILE*******************************/
 @media screen and (max-width: 1024px) {
-  .nav-bar-hamburger {
-    position: absolute;
-    display: grid;
-    width: 20%;
-    border-radius: 5px;
-    height: 35px;
-    margin-top: 1px;
+  .cartPanelBackground {
+    background-color: rgba(0,0,0,.7);
+    bottom: 0;
+    left: 0;
+    width: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    transition: 0.5s;
   }
-
+  
   .hamburger-img {
-    background-repeat: no-repeat;
-    height: 60px;
-    width: 36px;
-    margin-left: 21px;
-    margin-top: -12px;
+    height: 70px;
   }
 
-  .hb-sidenav {
-    height: 87%;
+  .hb-sidenav { 
+    height: 91.3%;
     width: 0;
     position: fixed;
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: whitesmoke;
+    background-color: #f4511e;
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
@@ -39,13 +37,36 @@
   .hb-sidenav a {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
-    color: #818181;
+    color: gray;
     display: block;
     transition: 0.3s;
   }
 
+  .category {
+    line-height: 3em;
+  }
+
+  .title {
+    position: absolute;
+    margin-top: -7.5%;
+    margin-left: 5%;
+    font-size: 20px;
+    font-family: Celias, Helvetica;
+    font-weight: bold;
+    color: #ffffff;
+  }
+
+  div.categoryDiv {
+    background-color: white;
+    height: 100%
+  }
+
   .hb-sidenav a:hover {
-    color: #f1f1f1;
+    color: #f4511e;
+  }
+
+  .hb-sidenav {
+    color: #f4511e;
   }
 
   .hb-sidenav .hb-closebtn {

@@ -5,12 +5,13 @@
       alt="Avatar"
       class="user-login-img"
       (click)="isLoginPanelOpen=true"
-      *ngIf="!showUserName"
+      *ngIf="!showUserName||(showUserName&&isElementForMobile)"
     />
+    <span *ngIf="showUserName&&isElementForMobile" class="user-logged-in"></span>
     <label *ngIf="!showUserName" (click)="isLoginPanelOpen=true" style="cursor: pointer;">Login</label>
     <label *ngIf="showUserName" username style="position: absolute">Hey, Sagar!</label>    
-    <span *ngIf="showUserName" class="logout" (click)="showLogoutPanel=true"></span>
-    <div *ngIf="showLogoutPanel" class="logoutPanel" (click)="onCloseButton()">
+    <span *ngIf="showUserName&&isElementForWeb" class="logout" (click)="showLogoutPanel=true"></span>
+    <div *ngIf="showLogoutPanel&&isElementForWeb" class="logoutPanel" (click)="onCloseButton()">
       Logout
     </div>
   </div>

@@ -29,7 +29,7 @@ export class LocationPanelComponent implements OnInit {
   }
 
   openLocationNav() {
-    document.getElementById('locationSidenav').style.width = '100%';
+    document.getElementById('locationSidenav').style.width = '80%';
     this.locationColor = '#f4511e';
   }
 

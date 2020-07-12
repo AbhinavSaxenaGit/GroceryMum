@@ -1,4 +1,4 @@
-<div class="nav-bar-hamburger" [ngStyle]="{'background-color' : color}">
+<div [ngStyle]="{'background-color' : color}">
     <img
     src="../../../assets/hamburger.svg"
     class="hamburger-img" 
@@ -6,21 +6,15 @@
     />
 </div>
 
-<div>
+<div id="hbSidenavBG" class="cartPanelBackground">
     <div id="hbSidenav" class="hb-sidenav">
+      <span class="title">Categories</span>
       <a href="javascript:void(0)" class="hb-closebtn" (click)="closeHamburgerNav()"
         >&times;</a
-      > 
-      <a href="#">Top selling items</a>
-      <a href="#">Oils</a>
-      <a href="#">Cold Drinks</a>
-      <a href="#">Baby Products</a>
-      <a href="#">Beverages</a>
-      <a href="#">Bread & Bakery</a>
-      <a href="#">Breakfast & Cereal</a>
-      <a href="#">Canned Goods & Soups</a>
-      <a href="#">Condiments/Spices & Bake</a>
-      <a href="#">Cookies, Snacks & Candy</a>
+      >
+      <div class="categoryDiv">
+        <a href="#" *ngFor="let category of categories" class="category" (click)="categoryTapped()">{{category.name}}</a>
+      </div>
     </div>
   </div>
   
