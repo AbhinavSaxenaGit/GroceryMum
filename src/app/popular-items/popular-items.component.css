@@ -1,7 +1,11 @@
-.popular-category-accordion {
-  display: none;
+/***************************************WEB CSS************************************/
+@media screen and (max-width: 1024px) {
+  .daily-shop-img {
+    margin-top: 17%;
+    width: 174%;
+    cursor: pointer;
+  }
 }
-
 /***************************************WEB CSS************************************/
 @media screen and (min-width: 1024px) {
   .daily-shop-img {

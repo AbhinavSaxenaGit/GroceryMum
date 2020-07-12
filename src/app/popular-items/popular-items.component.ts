@@ -9,14 +9,17 @@ import { CategoryService } from '../services/category.service';
 export class PopularItemsComponent implements OnInit {
   constructor(private _categoryService: CategoryService) {}
 
-  ngOnInit(): void {
-    this.getCategory();
-    
-  }
-
   categories: [];
   categoryCode: number;
   subCategoryCode: number;
+  isElementForWeb = false;
+
+  ngOnInit(): void {
+    this.getCategory();
+    if (window.screen.width >= 1024) {
+      this.isElementForWeb = true;
+    }   
+  }
 
   scrollToItemsGrid() {
     window.scrollTo(window.scrollX, window.scrollY + 400);

@@ -9,11 +9,16 @@ import { CategoryService } from '../services/category.service';
 export class BottomBarComponent implements OnInit {
   constructor(private _categoryService: CategoryService) {}
 
+  categories: [];
+  isElementForWeb = false;
+  
   ngOnInit(): void {
     this.getCategory();
-  }
 
-  categories: [];
+    if (window.screen.width >= 1024) {
+      this.isElementForWeb = true;
+    }   
+  }
 
   //Services
   getCategory() {

@@ -13,29 +13,31 @@ input.searchBtn {
     position: fixed;
     top: 0px;
     width: 100%;
-    background-color: darkslateblue;
+    background-color: #f4511e;
   }
 
   input.searchBox {
-    width: 76%;
-    height: -webkit-fill-available;
+    width: 82%;
+    height: 90%;
+    margin-top: 0.5%;
     border: none;
-    border-radius: 2px 0px 0px 2px;
+    outline: none;;
+    border-radius: 50px 0px 0px 50px;
     padding: 0px 10px;
     display: flex;
     margin-left: 14px;
   }
 
-  /* Set a style for all buttons */
   input.searchBtn {
     background-repeat: no-repeat;
+    height: 90%;
     border: none;
-    border-radius: 0px 2px 2px 0px;
+    outline: none;
+    border-radius: 0px 50px 50px 0px;
     display: flex;
-    margin-top: -60px;
-    width: 12.5%;
-    margin-left: 84%;
-    height: -webkit-fill-available;
+    margin-top: -54px;
+    width: 70px;
+    margin-left: 87%;
   }
 }
 

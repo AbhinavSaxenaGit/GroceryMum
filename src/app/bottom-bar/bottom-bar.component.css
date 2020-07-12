@@ -1,6 +1,18 @@
-div.bottom-bar {
-  margin: 2%;
+/***************************************MOBILE CSS************************************/
+@media screen and (max-width: 1024px) {
+  div.bottom-bar {
+    margin: 2%;
+    width: 174%;
+  }
 }
+
+/***************************************WEB CSS************************************/
+@media screen and (min-width: 1024px) {
+  div.bottom-bar {
+    margin: 2%;
+  }
+}
+
 div.title {
   color: #333;
   font-size: 14px;
@@ -41,42 +53,42 @@ img {
 }
 
 .categories-section {
-    margin-top: 2%;
-    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.33);
+  margin-top: 2%;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.33);
 }
 
 .categories {
-    display: flex;
-    padding-bottom: 1%;
+  display: flex;
+  padding-bottom: 1%;
 }
 
 a {
-    margin-left: 3%;
-    color: #333;
-    text-decoration: none;
-    width: max-content;
+  margin-left: 3%;
+  color: #333;
+  text-decoration: none;
+  width: max-content;
 }
 
 .useful-cat {
-    line-height: 3em;
+  line-height: 3em;
 }
 
 .finduson {
-    margin-top: 2%;
+  margin-top: 2%;
 }
 
 div.links {
-    display: flex;
+  display: flex;
 }
 
 .copyright {
-    color: #999;
-    word-spacing: 2px;
-    margin: 40px 0;
-    font-size: 14px;
+  color: #999;
+  word-spacing: 2px;
+  margin: 40px 0;
+  font-size: 14px;
 }
 
 .hover:hover {
-    background-color: #f4511e;
-    border-radius: 50%;
+  background-color: #f4511e;
+  border-radius: 50%;
 }

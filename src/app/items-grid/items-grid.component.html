@@ -1,17 +1,43 @@
 <div class="items-grid">
   <div class="products" *ngFor="let product of products">
-    <img [src]="product.Image" class="product-img" />
-    <span class="sp">₹{{product.Selling_Price}}</span>
-    <span class="mrp">₹{{product.MRP}}</span>
-    <span class="discount">{{product.discount}}% OFF</span>
-    <span class="quantity">{{product.Quantity}}</span>
-    <div *ngIf = "product.count==0">
-      <input type="button" value = "Add to Cart" class= "addToCart" (click)="addProductToCart(product)"/>
+    <div class="top-section">
+      <img [src]="product.Image" class="product-img" />
+      <div class="productDetails">
+        <span class="sp">₹{{ product.Selling_Price }}</span>
+        <span class="mrp">₹{{ product.MRP }}</span>
+        <span class="discount">{{ product.discount }}% OFF</span>
+        <span class="quantity">{{ product.Quantity }}</span>
+      </div>
     </div>
-    <div *ngIf = "product.count!=0">
-      <input type="button" value = "-" class="decrease" (click)="removeProduct(product)"/>
-      <input type="text" class="count" [(ngModel)]=product.count disabled = true/>
-      <input type="button" value = "+" class="increase" (click)="addProductToCart(product)"/>
-    </div>
+
+
+      <div class="addToCartDiv" *ngIf="product.count == 0">
+        <input
+          type="button"
+          value="Add to Cart"
+          class="addToCart"
+          (click)="addProductToCart(product)"
+        />
+      </div>
+      <div class="addToCartDiv" *ngIf="product.count != 0">
+        <input
+          type="button"
+          value="-"
+          class="decrease"
+          (click)="removeProduct(product)"
+        />
+        <input
+          type="text"
+          class="count"
+          [(ngModel)]="product.count"
+          disabled="true"
+        />
+        <input
+          type="button"
+          value="+"
+          class="increase"
+          (click)="addProductToCart(product)"
+        />
+      </div>
   </div>
 </div>
