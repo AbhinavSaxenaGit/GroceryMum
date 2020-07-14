@@ -11,7 +11,7 @@
   <span class="cartItemsPrice" *ngIf = "!showCartLabel&&isElementForWeb" (click)="openCartNav()">₹ {{totalAmount}}</span>
 </div>
 
-<div class="cartPanelBackground" *ngIf = "showCartPanelBackground"></div>
+<div id="cartSidenavBG" class="cartPanelBackground" *ngIf = "showCartPanelBackground"></div>
   <div id="cartSidenav" class="cart-sidenav">
     <div class="totalItemsInCart">My Cart ({{totalItemsCount}} items - ₹ {{totalAmount}})</div>
     <div class="items-grid">

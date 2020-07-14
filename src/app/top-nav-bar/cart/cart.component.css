@@ -1,6 +1,6 @@
 /*slider*/
 .cart-sidenav {
-  height: 91.3%;
+  height: 90.5%;
   width: 0;
   position: fixed;
   z-index: 1;
@@ -18,10 +18,6 @@
   color: #818181;
   display: block;
   transition: 0.3s;
-}
-
-.cart-sidenav a:hover {
-  color: #f1f1f1;
 }
 
 .cart-sidenav .cart-closebtn {
@@ -57,11 +53,12 @@
   position: fixed;
   right: 0;
   top: 50px;
+  transition: 0.5s;
 }
 
 .totalItemsInCart {
   position: absolute;
-  margin-top: -7.5%;
+  margin-top: -8.5%;
   margin-left: 5%;
   font-size: 20px;
   font-family: Celias, Helvetica;
@@ -174,10 +171,6 @@ div.bottom_bar {
   width: 20px;
 }
 
-.decrease:hover {
-  background: #f4511e;
-}
-
 .count {
   width: 10%;
   border: none;
@@ -193,10 +186,6 @@ div.bottom_bar {
   background-color: white;
 }
 
-.increase:hover {
-  background: #f4511e;
-}
-
 .mutiply {
   margin-left: 25%;
   margin-top: -3.5%;
@@ -209,10 +198,36 @@ div.bottom_bar {
   position: absolute;
 }
 
+.increase:hover {
+  background: #f4511e;
+}
+
+.decrease:hover {
+  background: #f4511e;
+}
+
+.cart-sidenav a:hover {
+  color: #f1f1f1;
+}
+
 /***************************************MOBILE CSS************************************/
 @media screen and (max-width: 1024px) {
+  div.products {
+    width: 96%;
+    margin-left: 2%;
+  }
+
+  .cart-sidenav {
+    height: 85.5%;
+  }
+
+  .totalItemsInCart {
+    margin-top: -11.5%;
+  }
+
   .user-cart-img {
-    width: 60px;
+    width: 40px;
+    margin-top: 23%;
   }
 
   img.close {
@@ -240,12 +255,57 @@ div.bottom_bar {
   }
 
   .product-img {
-    height: 35%;
+    width: 25%;
   }
 
   div.bottom_bar {
-    margin-top: 7%;
+    margin-top: 8%;
   }  
+
+  .quantity, .brand, .mutiply, .equal, .final_sp {
+    font-size: 15px;
+  }
+
+  .equal {
+    margin-left: 56%;
+  }
+  
+  .final_sp {
+    margin-left: 63%;
+  }
+
+  .discount {
+    font-size: 15px;
+    margin-left: 2%;
+  }
+
+  .mutiply, .sp, .mrp, .equal, .final_sp {
+    margin-top: -6%;
+  }
+
+  .sp {
+    margin-left: 32%;
+    font-size: 20px;
+    margin-top: -6.5%;
+  }
+
+  .mrp {
+    font-size: 15px;
+    margin-left: 45%;
+    margin-top: -5.5%;
+  }
+
+  .decrease, .increase {
+    height: 25px;
+    width: 25px;
+  }
+
+  .count {
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+    vertical-align: sub;
+  }
 }
  
 /***************************************WEB CSS************************************/

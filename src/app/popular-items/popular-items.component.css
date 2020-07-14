@@ -2,7 +2,8 @@
 @media screen and (max-width: 1024px) {
   .daily-shop-img {
     margin-top: 17%;
-    width: 176%;
+    margin-left: 2%;
+    width: 96%;
     cursor: pointer;
   }
 }

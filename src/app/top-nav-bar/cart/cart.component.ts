@@ -33,6 +33,7 @@ export class CartComponent implements OnInit {
     this.showCartPanelBackground = true;
     if (this.isElementForMobile) {
       document.getElementById('cartSidenav').style.width = '100%';
+      // document.getElementById('cartSidenavBG').style.width = '100%';
       this.cartColor = '#f4511e';
       }
       else {
@@ -47,6 +48,7 @@ export class CartComponent implements OnInit {
   
   closeCartNav() {
     document.getElementById("cartSidenav").style.width = "0";
+    // document.getElementById('cartSidenavBG').style.width = "0";
     this.cartColor = this.isElementForMobile ? 'whitesmoke' : '';
     this.showCartPanelBackground = false;    
   }
