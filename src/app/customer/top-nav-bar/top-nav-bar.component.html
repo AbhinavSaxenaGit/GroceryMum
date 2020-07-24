@@ -1,0 +1,9 @@
+<div class="header">
+  <app-global-search></app-global-search>
+  <app-hamburger class="menu"></app-hamburger>
+  <app-home class="menu"></app-home>
+  <app-location-panel *ngIf="isElementForWeb"></app-location-panel>
+  <app-login-panel class="menu"></app-login-panel>
+  <app-cart class="menu"></app-cart>
+  <a href="/admin" *ngIf="isElementForWeb&&userType==1"><button class="home"></button></a>
+</div> 

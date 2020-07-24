@@ -1,0 +1,11 @@
+[
+  {
+    "orderId": 1,
+    "orderStatus": 1,
+    "cutomerName": "Sagar",
+    "cutomerPhoto": "../../assets/avatar_male.svg",
+    "address": "403, Radha Kunj II, Nand Gram, Ghaziabad UP - 201001",
+    "mobileNo": 9711323367,
+    "location": "Raj Nagar ext 1"
+  }
+]

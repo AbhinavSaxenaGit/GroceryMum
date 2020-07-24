@@ -1,0 +1,94 @@
+<div class="uploadArea">
+  <a href="/"><button class="home"></button></a>
+
+  <input
+    type="file"
+    id="file"
+    accept=".xlsx"
+    (change)="handleFileInput($event.target.files)"
+  />
+</div>
+
+<div class="orders">
+  <div class="topPanel">
+    <li class="menu" [ngClass] = "{'selectedMenu': menuItem==1}" 
+        (click) = "selectMenu(1)">Active orders(Today's)</li>
+    <li class="menu" [ngClass] = "{'selectedMenu': menuItem==2}" 
+        (click) = "selectMenu(2)">Completed orders(Today's)</li>
+    <li class="menu" [ngClass] = "{'selectedMenu': menuItem==3}" 
+        (click) = "selectMenu(3)">All orders(Today's)</li>
+    <li class="menu" [ngClass] = "{'selectedMenu': menuItem==4}" 
+        (click) = "selectMenu(4)">All orders</li>
+  </div>
+
+  <div class="detailsPanel">
+    <div class="sidePanel">
+      <div class="order" *ngFor="let order of orders" 
+           [ngClass]="{'selectedOrder': order.orderId===selectedOrder}"
+           (click) = "selectOrder(order.orderId)">
+        <span class="serial">{{order.orderId}}</span>
+        <div class="innerDiv">
+          <li class="orderSummary" style="margin-top: 3%;">{{order.cutomerName}} - {{order.mobileNo}}</li>
+          <li class="orderSummary">{{order.location}}</li>
+        </div>
+        <span class="right"></span>          
+      </div>
+    </div>
+
+    <div class="mainPanel">
+        <div class="customerInfo" *ngFor="let customer of customer">
+          <img [src]="customer.cutomerPhoto"/>
+          <div class="personalDetails">
+            <table class="customerDetails">
+              <tr>
+                <td>Name</td> 
+                <td colspan="2">: {{customer.cutomerName}}</td>
+              </tr>
+              <tr>
+                <td>Address</td>
+                <td colspan="2">: {{customer.address}}</td>
+              </tr>
+              <tr>
+                <td>Mobile Number</td>
+                <td colspan="2">: {{customer.mobileNo}}</td>
+              </tr>
+              <tr>
+                <td>Location</td>
+                <td colspan="2">: {{customer.location}}</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <div class="orderInfo" >
+            <table class="orderTable">
+              <tr class="tableRow">
+                <th class="tableHeading">Product</th>
+                <th class="tableHeading">Brand</th>                
+                <th class="tableHeading">Quantity</th>
+                <th class="tableHeading">Item count</th>                
+                <th class="tableHeading">Price</th>
+              </tr>
+              <div *ngFor="let order of customerOrder" style="display: contents;">
+                <tr  class="tableRow" *ngFor="let orderDetails of order.orderDetails">
+                  <td class="tableData"><img [src]="orderDetails.Image" width="10%"/> Product code: {{orderDetails.Code}}</td>
+                  <td class="tableData">{{orderDetails.Brand}}</td>
+                  <td class="tableData">{{orderDetails.Quantity}}</td>
+                  <td class="tableData">{{orderDetails.count}}</td>
+                  <td class="tableData" style="text-align: right;">{{orderDetails.Selling_Price}}</td>
+                </tr>
+              </div>
+            </table>
+        </div>
+        <div class="commonActionBar">
+          <table class="orderTable">
+            <tr class="tableRow">
+              <td class="tableData">Action 1</td>
+              <td class="tableData">Action 2</td>
+              <td class="tableData">Action 3</td>
+              <td class="tableData">Action 4</td>
+              <td class="tableData" style="font-weight: bold;">Total Price: {{totalPrice}}</td>
+            </tr>
+          </table>
+        </div>
+    </div>
+</div>

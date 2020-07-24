@@ -1,0 +1,56 @@
+  /******************************MOBILE********************************/
+  @media screen and (max-width: 1024px) {
+    .header {
+      width: 96%;
+      margin-left: 2%;
+      height: 3.5em;
+      border-top: 1px solid;
+      border-radius: 0;
+      position: fixed;
+      display: flex;
+      bottom: 0;
+      background-color: #f4511e;
+    }
+
+    .menu {
+      margin-left: 11.5%;
+    }
+  }
+  
+  /******************************WEB********************************/
+  @media screen and (min-width: 1024px) {
+    .logo {
+      display: flex;
+      border-radius: 50%;
+      height: 40px;
+      width: 40px;
+      margin: 5px;
+    }
+  
+    .header {
+      background-color: #f4511e;
+      width: 100%;
+      position: fixed;
+      top: 0;
+      z-index: 2;
+    }
+
+    .home {
+      outline: none;
+      position: fixed;
+      margin-top: 1.2%;
+      background-color: Transparent;
+      background-size: 20px 20px;
+      z-index: 2;
+      right: 1%;
+      height: 20px;
+      width: 20px;
+      border: none;
+      background-image: url("../../../assets/admin.svg");
+    }   
+    
+    .home:hover {
+      cursor: pointer;
+    }
+  }
+  
