@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { OrdersService } from '../services/orders.service';
 import { CustomerService } from '../services/customerInfo.service';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-admin',
@@ -11,19 +12,16 @@ export class AdminComponent implements OnInit {
   fileToUpload: File = null;
   orders = [];
   customer = [];
-  customerOrder =  {
-                    totalItems: 0,
-                    totalPrice: 0,
-                    orderDetails: []
-                   };  
-  totalItems : number;
-  totalPrice : number;
+  totalItems = 0;
+  totalPrice = 0;
+  customerOrder = [];
   selectedOrder = 0;
   menuItem = 1;
 
   constructor(
         private _orderService: OrdersService,
-        private _customerInfoService: CustomerService
+        private _customerInfoService: CustomerService,
+        private toastr: ToastrService
         ) {}
 
   ngOnInit(): void {
@@ -41,14 +39,9 @@ export class AdminComponent implements OnInit {
     //Getting the active order of first record
     this._customerInfoService.getCustomerOrder().subscribe(data =>{
       this.customerOrder = <any>data.body;   
-    });
-
-    this.totalItems = this.customerOrder.totalItems;
-    this.totalPrice = this.customerOrder.totalPrice;
-    console.log(this.customerOrder);
-    
-    console.log(this.totalItems , this.totalPrice);
-    
+      this.totalPrice = this.customerOrder[0].totalPrice;
+      this.totalItems = this.customerOrder[0].totalItems;
+    });    
   }
 
   handleFileInput(files: FileList) {
@@ -68,5 +61,19 @@ export class AdminComponent implements OnInit {
       this.orders = <any>data.body;  
       this.selectedOrder = this.orders[0].orderId;
     });
+  }
+
+  completeOrder(orderId) {
+    let flag = window.confirm("Are you sure, you want to complete this order?");
+    if (flag) {
+      this.toastr.success("Order id "+orderId+" is completed sucessfully");
+    }
+  }
+
+  cancelOrder(orderId) {
+    let flag = window.confirm("Are you sure, you want to cancel this order?");
+    if (flag) {
+      this.toastr.success("Order id "+orderId+" is cancelled sucessfully");
+    }
   }
 }

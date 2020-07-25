@@ -18,3 +18,10 @@ export interface IProductDetails {
   brand: string;
   image: string;
 }
+
+//To Get Customer Order
+export interface ICustomerOrder {
+  totalItems: number;
+  totalPrice: number;
+  orderDetails: [];
+ };  

@@ -73,7 +73,7 @@
     display: grid;
     width: 74.4%;
     margin-top: 5px;
-    margin-left: .5%;
+    margin-left: 0.5%;
     grid-template-rows: 15% 78% 6.8%;
   }
 
@@ -93,7 +93,8 @@
     border-bottom: 3px solid steelblue;
   }
 
-  .menu:hover, .selectedMenu {
+  .menu:hover,
+  .selectedMenu {
     cursor: pointer;
     color: steelblue;
     border-bottom: 3px solid steelblue;
@@ -104,7 +105,8 @@
     border-bottom: 1px solid black;
   }
 
-  .order:hover, .selectedOrder {
+  .order:hover,
+  .selectedOrder {
     cursor: pointer;
     background-color: #f4511e;
     /* border-right: 2px solid steelblue; */
@@ -151,12 +153,14 @@
   }
 
   .commonActionBar {
-    background-color: #f4511e;
+    background-color: whitesmoke;
+    display: flex;
+    width: 100%;
   }
 
   .personalDetails {
     display: grid;
-    font-weight: bold; 
+    font-weight: bold;
   }
 
   table.orderTable {
@@ -176,8 +180,25 @@
     text-align: left;
     padding: 8px;
   }
-  
+
   tr.tableRow:nth-child(even) {
     background-color: #dddddd;
+  }
+
+  .cancelOrder {
+    margin-left: 54%;
+    margin-top: .4%;
+  }
+
+  .completeOrder {
+    margin-left: 1%;
+    margin-top: .4%;
+  }
+
+  .totalPrice {
+    font-weight: bold;
+    line-height: 3em;
+    vertical-align: middle;
+    margin-left: 5%;
   }
 }

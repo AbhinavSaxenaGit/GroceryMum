@@ -19,7 +19,7 @@
         (click) = "selectMenu(3)">All orders(Today's)</li>
     <li class="menu" [ngClass] = "{'selectedMenu': menuItem==4}" 
         (click) = "selectMenu(4)">All orders</li>
-  </div>
+  </div> 
 
   <div class="detailsPanel">
     <div class="sidePanel">
@@ -74,21 +74,22 @@
                   <td class="tableData">{{orderDetails.Brand}}</td>
                   <td class="tableData">{{orderDetails.Quantity}}</td>
                   <td class="tableData">{{orderDetails.count}}</td>
-                  <td class="tableData" style="text-align: right;">{{orderDetails.Selling_Price}}</td>
+                  <td class="tableData" style="text-align: right;">₹{{orderDetails.Selling_Price}}</td>
                 </tr>
               </div>
             </table>
         </div>
         <div class="commonActionBar">
-          <table class="orderTable">
-            <tr class="tableRow">
-              <td class="tableData">Action 1</td>
-              <td class="tableData">Action 2</td>
-              <td class="tableData">Action 3</td>
-              <td class="tableData">Action 4</td>
-              <td class="tableData" style="font-weight: bold;">Total Price: {{totalPrice}}</td>
-            </tr>
-          </table>
+          <div class="cancelOrder">
+            <button mat-raised-button color="warn" (click)="cancelOrder(selectedOrder)">Cancel Order</button>
+          </div>
+          <div class="completeOrder">
+            <button mat-raised-button color="primary" (click)="completeOrder(selectedOrder)">Complete Order</button>
+          </div>
+          <div class="totalPrice">
+            <span>Total Price: </span> 
+            <span>₹{{totalPrice}}</span>
+          </div>
         </div>
     </div>
 </div>
