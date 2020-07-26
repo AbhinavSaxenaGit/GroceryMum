@@ -37,6 +37,7 @@ export class LoginPanelComponent implements OnInit {
   isLoginPanelOpen = false;
   showUserName = false;
   showLogoutPanel = false;
+  userType = '0';
 
   //For API response
   statusCode: number;
@@ -68,6 +69,11 @@ export class LoginPanelComponent implements OnInit {
       this.isElementForMobile = true;
     } else {
       this.isElementForWeb = true;
+    }
+
+    this.userType = localStorage.getItem('userType');
+    if(this.userType == '1') {
+      this.showUserName = true;
     }
   }
 
@@ -111,8 +117,11 @@ export class LoginPanelComponent implements OnInit {
   //Verifying if user is registered or not
   onSubmitMobNo() {
     if (this.userLoginInfo.mobileNumber != null) {
-      if (this.userLoginInfo.mobileNumber == '9711323367')
-        this.showPasswordField = true;
+      if (this.userLoginInfo.mobileNumber == '9711323367'
+         || this.userLoginInfo.mobileNumber == '9210790788') {
+            this.showPasswordField = true;
+            localStorage.setItem('mobileNumber', this.userLoginInfo.mobileNumber);
+         }
       else this.showSignUpForm = true;
     }
     else
@@ -122,6 +131,11 @@ export class LoginPanelComponent implements OnInit {
       if (this.userLoginInfo.password == '0112128651') {
         this.isLoginPanelOpen = false;
         this.showUserName = true;
+        if (localStorage.getItem('mobileNumber') == '9711323367') {
+          this.userType = '1';
+          localStorage.setItem('userType', '1');
+          localStorage.setItem('showUserName', 'true');
+        }
       }
       else 
         this.toastr.warning("Please enter correct password...");      
@@ -164,5 +178,10 @@ export class LoginPanelComponent implements OnInit {
     } else {
       this.toastr.warning('Please fill the required fields...');
     }
+  }
+
+  onLogout() {
+    localStorage.removeItem('userType');
+    window.location.reload();    
   }
 }

@@ -9,7 +9,6 @@ export class TopNavBarComponent implements OnInit {
 
   isElementForMobile = false;
   isElementForWeb = false;
-  userType:Number = 1;
  
   constructor() {}
 

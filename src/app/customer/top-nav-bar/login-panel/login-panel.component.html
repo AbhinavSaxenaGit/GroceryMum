@@ -9,9 +9,11 @@
     />
     <span *ngIf="showUserName&&isElementForMobile" class="user-logged-in"></span>
     <label *ngIf="!showUserName" (click)="isLoginPanelOpen=true" style="cursor: pointer;">Login</label>
-    <label *ngIf="showUserName" username style="position: absolute">Hey, Sagar!</label>    
+    <label *ngIf="showUserName" username style="position: absolute">Hey, {{
+      userType=='1' ? "Sagar" : "Madhu"
+    }}</label>    
     <span *ngIf="showUserName&&isElementForWeb" class="logout" (click)="showLogoutPanel=true"></span>
-    <div *ngIf="showLogoutPanel&&isElementForWeb" class="logoutPanel" (click)="onCloseButton()">
+    <div *ngIf="showLogoutPanel&&isElementForWeb" class="logoutPanel" (click)="onLogout()">
       Logout
     </div>
   </div>
@@ -150,3 +152,5 @@
     </div>
   </div>
 </div>
+
+<a href="/admin" *ngIf="isElementForWeb&&userType=='1'"><button class="admin"></button></a>
