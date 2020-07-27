@@ -55,9 +55,12 @@
     text-align: center;
     margin-bottom: 2px;
     z-index: 1;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.33);
   }
 
   div.detailsPanel {
+    height: inherit;
+    margin-top: 10px;
     display: flex;
     background-color: whitesmoke;
   }
@@ -65,16 +68,15 @@
   div.sidePanel {
     display: grid;
     width: 25.1%;
-    height: 50%;
-    margin-right: 2px;
+    height: -webkit-fill-available;
+    margin-right: 3px;
+    overflow: scroll;
   }
 
   div.mainPanel {
     display: grid;
     width: 74.4%;
-    margin-top: 5px;
-    margin-left: 0.5%;
-    grid-template-rows: 15% 78% 6.8%;
+    grid-template-rows: 15% 82% 0%;
   }
 
   li {
@@ -103,6 +105,7 @@
   .order {
     display: flex;
     border-bottom: 1px solid black;
+    height: 4em;;
   }
 
   .order:hover,
@@ -113,7 +116,8 @@
   }
 
   .right {
-    margin-top: 7%;
+    position: relative;
+    margin-top: 22px;
     width: 0;
     height: 0;
     border-top: 10px solid transparent;
@@ -142,7 +146,8 @@
   }
 
   table.customerDetails {
-    font-size: 16px;
+    margin-top: .8%;
+    font-size: 80%;
     border-collapse: collapse;
     table-layout: fixed;
     width: 100%;

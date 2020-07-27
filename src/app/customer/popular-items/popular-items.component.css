@@ -1,7 +1,7 @@
-/***************************************WEB CSS************************************/
+/***************************************Mobile CSS************************************/
 @media screen and (max-width: 1024px) {
   .daily-shop-img {
-    margin-top: 17%;
+    margin-top: 14%;
     margin-left: 2%;
     width: 96%;
     cursor: pointer;
