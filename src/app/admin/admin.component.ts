@@ -64,15 +64,15 @@ export class AdminComponent implements OnInit {
   }
 
   completeOrder(orderId) {
-    let flag = window.confirm("Are you sure, you want to complete this order?");
-    if (flag) {
+    let flag = window.prompt("Are you sure, you want to complete this order?");
+    if (flag != null) {
       this.toastr.success("Order id "+orderId+" is completed sucessfully");
     }
   }
 
   cancelOrder(orderId) {
-    let flag = window.confirm("Are you sure, you want to cancel this order?");
-    if (flag) {
+    let flag = window.prompt("Are you sure, you want to cancel this order?");
+    if (flag != null) {
       this.toastr.success("Order id "+orderId+" is cancelled sucessfully");
     }
   }
