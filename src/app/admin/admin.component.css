@@ -70,7 +70,7 @@
     width: 25.1%;
     height: -webkit-fill-available;
     margin-right: 3px;
-    overflow: scroll;
+    overflow: auto;
   }
 
   div.mainPanel {
